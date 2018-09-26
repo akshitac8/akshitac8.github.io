@@ -25,9 +25,10 @@ description: Personal HomePage
 navbar-links:
   Experience: "Experience"
   Education: "Education"
+  Projects: "projects"
   Open Source: "Opensource"
   Resume: "https://drive.google.com/open?id=1gTMbjwxoPwG-YwQB5zc-EIsCR7rhN_6A"
-  Blog: "http://channelcs.github.io/"
+  Blog: "http://www.channelcs.github.io/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
