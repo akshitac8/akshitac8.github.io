@@ -6,7 +6,7 @@ title: Work Experience
 
 You can also read more about the experience on [LinkedIn](https://www.linkedin.com/in/akshita-gupta152/).
 
-Research and Development Intern, Mozilla 
+### Research and Development Intern, Mozilla 
 * May. 2018 – Aug. 2018 
 * Mentor: Emma Irwin 
 * Developed an open source analytics dashboard prototype with the metrics to evaluate Diversity and Inclusion.
@@ -14,13 +14,13 @@ Research and Development Intern, Mozilla
 * Delivered a pilot project to represent as a bridge between MOZILLA and CHAOSS open source organizations.
 * Learned Kibana, Logstash and Elastic Search for data extraction and visualization during the internship. [Github](https://github.com/akshitac8/diversity_metrics_prototype)
 
-Undergraduate Teaching Assistant, Graphic Era University, Dehradun
+### Undergraduate Teaching Assistant, Graphic Era University, Dehradun
 * Jan. 2018 – Apr. 2018
 * Instructor: Mr Gaurav Bhatt 
 * TCS821: Intro to Cloud Computing
 * Machine Learning algorithms were illustrated on cloud platforms like Heroku, Docker, and CloudFoundry. [Github](https://github.com/DeepLearn-lab/modules-cloud)
 
-Machine Learning Intern, Indian Institute of Technology, Roorkee 
+### Machine Learning Intern, Indian Institute of Technology, Roorkee 
 
 * May. 2017 – Jul. 2017 
 * Advisor: Dr R Balasubramanian
