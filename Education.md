@@ -1,16 +1,16 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: Education
 ---
 
-My name is Inigo Montoya. I have the following qualities:
-
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Bachelor of Technology DIT University, Dehradun
+Computer Science and Engineering; GPA: 7.83/10.0 Aug. 2014 – Aug. 2018
+Semester Exchange Student Indian Institute of Technology, Roorkee
+Advisor: Dr R Balasubramanian Jan. 2018 – Aug. 2018
+◦ Bachelor Thesis: Attention based Visual QA, Implemented a model for Visual Question Answering(VQA) which
+used stacked attention mechanism to produce a feature importance weighting vector on the VGG16 last Convolution
+layer features of the image using the question embedding as a query vector.
+◦ Final model performed better than model which exercised single pass attention mechanism. We hypothesized that
+multiple steps of reasoning is required to answer questions about fine grained information in image.
+◦ Implemented Faster-RCNN, YOLOv2 and applied it on INRIA person dataset.
+◦ CGPA: 9.00/10.00
