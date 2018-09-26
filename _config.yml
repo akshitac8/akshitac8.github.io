@@ -28,7 +28,7 @@ navbar-links:
   Experience: "Experience"
   Education: "Education"
   Open Source: "Opensource"
-  Resume: "/assests/Resume-AG.pdf"
+  Resume: "/assets/Resume-AG.pdf"
   Blog: "https://www.channelcs.github.io"
 
 # Image to show in the navigation bar - image must be a square (width = height)
