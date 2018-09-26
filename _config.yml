@@ -23,7 +23,6 @@ description: Personal HomePage
 
 # List of links in the navigation bar
 navbar-links:
-  About: "About"
   Experience: "Experience"
   Education: "Education"
   Open Source: "Opensource"
