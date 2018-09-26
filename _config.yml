@@ -27,7 +27,7 @@ navbar-links:
   Education: "Education"
   Open Source: "Opensource"
   Resume: "https://drive.google.com/open?id=1gTMbjwxoPwG-YwQB5zc-EIsCR7rhN_6A"
-  Blog: "www.channelcs.github.io/"
+  Blog: "https://www.channelcs.github.io/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -147,7 +147,7 @@ title-separator: "-"
 timezone: "Asia/Kolkata"
 markdown: kramdown
 highlighter: rouge
-permalink: /About/
+permalink: /:year-:month-:day-:title/
 paginate: 1
 
 kramdown:
