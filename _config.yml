@@ -147,7 +147,7 @@ title-separator: "-"
 timezone: "Asia/Kolkata"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /About/
 paginate: 1
 
 kramdown:
