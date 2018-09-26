@@ -1,16 +1,10 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: Open Source
 ---
 
-My name is Inigo Montoya. I have the following qualities:
-
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Mozilla-Diversity, Helping with the visualization (using Python, Matplotlib), Code of Conduct & Wiki page. [Github]
+◦ Taskcluster, Added GitHub integration button and automatic form submit options. [Github]
+◦ Systers, Made a few changes related to display. [Github]
+◦ VQA, Updated question & image functions for image fine-tuning using spacy glove vectors. [Github]
+◦ DeepLearn-Lab, Added acoustic scene classification and tagging code with authentic results. [Github]
