@@ -1,41 +1,103 @@
----
-layout: base
-use-site-title: true
----
+<!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the  Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
 
-{% include header.html type="page" %}
+<html lang="en">
+<head>
+  <title>John Doe</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
 
-<div class="container" role="main">
-  <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p>
-            <p><font size = "5">About Me</font></p>
-            <p>
-                I am a former <font color = "red">Mozilla outreachy intern</font> and recently completed my undergraduate major in computer science with a semester exchange at the <font color = "red">Indian Institute of Technology, Roorkee</font> under the supervision of <a href="https://scholar.google.co.in/citations?user=QU2O6JMAAAAJ&hl=en"><font color = "red">Dr R Balasubramanian</font></a>. I work at the junction of <u>software engineering</u> and <u>AI research solving problems</u> which lie in the intersection of <u>Computer Vision</u>, <u>Machine Learning</u>, and <u>Speech & Music Processing</u>.
-            </p>
-            <p><font size = "5">Achievements</font></p>
-            <ul>
-              <li>Travel Scholarship for ALL-Hands Mozilla, San Francisco. (Awarded to 12 students out of 2000)</li>
-              <li>Outreachy Travel Scholarship recipient (2018- 2019). (Awarded to 40 students out of 2000)</li>
-              <li>Selected for Bertelsmann Data Science Scholarship. (Awarded to only 1500 students)</li>
-              <li>Accepted for StartHack hackathon organized by University of St Gallens , Switzerland out of 1000 candidates.</li>
-              <li>Scored 144 out of 5383 Rank Cognizant Mastercode Hackathon.</li>
-              <li>Invited Talk at Mozilla, Diversity and Inclusion in Open Source - Community Call.</li>
-            </ul>
-            <p><font size = "5">Publications</font></p>
-            <ul>
-            <li>Gaurav Bhatt,Akshita Gupta, Aditya Arora, and Balasubramanian Raman “Acoustic Features Fusionusing Attentive Multi-channel Deep Architecture,”
-              Interspeech 2018 Workshop on Speech Processing inmEveryday Environment(CHIME 2018)
-            </li>
-            </ul>
-            <p><font size = "5">News</font></p>
-            <ul>
-              <li>[May 2018] Outreachy Internship with Open Innovation Team, Mozilla</li>
-              <li>[July 2018] Completed my semester exchange at IIT Roorkee</li>
-              <li>[July 2018] Completed my Undergrad Studies</li>
-              
-            </ul>
-          </p>
-  </div>
-  </div>
-</div>
+
+<!-- Navigation -->
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+		<ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#publications">Publications</a></li> 
+              <li><a href="#">CV</a></li> 
+		</ul>
+	  </div>
+	</nav>
+	
+
+  
+  <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Entries Column -->
+            <div class="col-md-8" style="height: 100vh;">
+                
+                <!-- Main Image -->
+                <img class="img-responsive" src="photo.gif" alt=""><br>
+                
+                <div style="margin-top:3%; text-align:justify;">                
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing <a href="#">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					
+					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+            </div> 
+
+            <!-- Contact Info on the Sidebar -->
+            <div class="col-md-4">
+                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>John Doe</b></div><br>
+                <p><b>john at doe.com</b><br>
+                <p>Random Department<br>
+                University of Randomness<br>
+                Street<br>
+                City <br>
+                Country<br>
+                </p>
+            </div>
+            
+            
+            <!-- Links on the Sidebar -->
+            <div class="col-md-4" style="margin-top:2%">
+              <dd><a href="#">Google Scholar</a></dd> 
+              <dd><a href="#">Twitter</a></dd>
+              <dd><a href="#">LinkedIn</a></dd>
+            </div>
+            
+            
+            <!-- Publications -->
+            <div class="col-md-8" style="height: 100vh;">    
+                <h2 id="publications">Publications</h2>
+                
+                <strong>Peer-reviewed</strong><br/>
+                <ul>
+                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
+                </ul>
+            
+                <strong>Technical Reports</strong><br/>
+                <ul>
+                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+
+    </div>
+    <!-- /.container -->
+    
+    <!-- Other people may like it too! -->
+    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
+    
+</body>
+
+</html>
