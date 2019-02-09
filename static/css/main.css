@@ -59,16 +59,6 @@ hr {
 	visibility: hidden
 }
 
-.navbar-right li {
-	color: white;
-}
-
-a:not(.navbar-brand) {
-	text-decoration: none;
-	border-bottom: 1px solid #ccc;
-	color: inherit;
-}
-
 .button-div {
 	border: 1px dashed black;
 	border-radius: 3px;
@@ -94,19 +84,6 @@ a:not(.navbar-brand) {
 	color: #000;
 	font-size: 34px;
 	font-weight: 700;
-	text-decoration: none
-}
-
-.nav-listitem {
-	margin: 0 15px 0 15px;
-	font-size: 18px;
-	display: inline-block;
-	float: left
-}
-
-.nav-listitem a {
-	color: green;
-	font-weight: bold;
 	text-decoration: none
 }
 
