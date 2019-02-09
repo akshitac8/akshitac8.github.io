@@ -33,15 +33,15 @@ p {
 
 a {
 	color: #000;
-	text-decoration: underline dashed;
+	/*text-decoration: underline dashed;*/
 	text-decoration-skip-ink: none;
-	text-underline-position: under
+	/*text-underline-position: under*/
 }
 
 a:hover {
 	color: green;
-	text-decoration: underline solid;
-	text-underline-position: under
+	/*text-decoration: underline solid;*/
+	/*text-underline-position: under*/
 }
 
 hr {
@@ -285,6 +285,5 @@ hr {
 
 .content img {
 	text-align: center;
-	height: 200px;
-	width: 200px;
+	width: 80%;
 }
