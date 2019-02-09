@@ -17,13 +17,13 @@
     <meta itemprop="description" name="description" content="Research Engineer @IIAI, sem exchange@ IITR" />
   <link rel="canonical" href="https://akshitac8.github.io/">
 
-  <!-- Favicon -->
+  <!-- Favicon 
   <link rel="shortcut icon" href="/static/ico/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="/static/ico/apple-touch-icon.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="/static/ico/apple-touch-icon-72x72.png" />
   <link rel="apple-touch-icon" sizes="120x120" href="/static/ico/apple-touch-icon-120x120.png" />
   <link rel="apple-touch-icon" sizes="144x144" href="/static/ico/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/static/ico/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/ico/apple-touch-icon-152x152.png" /> -->
 
   <!--Open Graph Related Stuff-->
   <meta property="og:locale" content="en_US">
@@ -31,8 +31,8 @@
   <meta property="og:title" content="Akshita Gupta">
   <meta property="og:url" content="https://akshitac8.github.io/">
   <meta property="og:site_name" content="Akshita Gupta">
-  <meta property="og:image" content="https://akshitac8.github.io/static/img/kd.jpg"/>
-  <meta property="og:image:url" content="https://akshitac8.github.io/static/img/kd.jpg"/>
+  <meta property="og:image" content="https://akshitac8.github.io/static/images/kd.jpg"/>
+  <meta property="og:image:url" content="https://akshitac8.github.io/static/images/kd.jpg"/>
   <meta property="og:description" content="Research Engineer @IIAI, sem exchange@ IITR.">
 
   <!--Twitter Card Stuff-->
@@ -41,10 +41,10 @@
   <meta name="twitter:description" content="Research Engineer @IIAI, sem exchange@ IITR.">
   <meta name="twitter:creator" content="@akshitac8">
 
-  <meta name="twitter:image" content="https://akshitac8.github.io/static/img/akshita.jpg"/>
-  <meta name="twitter:url" content="https://akshitac8.github.io/static/img/akshita.jpg"/>
+  <meta name="twitter:image" content="https://akshitac8.github.io/static/images/akshita.jpg"/>
+  <meta name="twitter:url" content="https://akshitac8.github.io/static/images/akshita.jpg"/>
   <meta name="twitter:description" content="Research Engineer @IIAI, sem exchange@ IITR."/>
-  <meta name="twitter:domain" value="kdexd.github.io">
+  <meta name="twitter:domain" value="akshitac8.github.io">
 
   <meta name="twitter:label1" value="Research Engineer"/>
   <meta name="twitter:data1" value="Inception Institute of Artificial Intelligence"/>
@@ -60,25 +60,33 @@
 
 </head>
 <body>
-  <nav id="navbar">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-sm-12 col-xs-12 col-12">
-        <div id="site-title-container">
-          <a id="site-title" href="">Akshita GUpta</a>
-        </div>
-        <div id="navbar-ul-container">
-          <ul id="navbar-ul">
-            <li class="nav-listitem">
-              <a target="_blank" href="/akshita_cv.pdf">CV</a>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand active" href="/">Akshita Gupta</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a target="_blank" href="http://github.com/akshitac8">Github</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="/static/docs/AkshitaCV.pdf" target="_blank">CV</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
       </div>
     </div>
-    <hr id="navbar-border">
-  </div>
-</nav>
+  </nav>
 
 
   <div class="container">
@@ -90,7 +98,7 @@
       <div class="row">
         <!-- Display picture -->
         <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 0">
-          <img alt="Akshita Gupta" title="Akshita Gupta" id="display-picture" src="/static/img/akshita.jpg" />
+          <img alt="Akshita Gupta" title="Akshita Gupta" id="display-picture" src="/static/images/akshita.jpg" />
         </div>
         <!-- Social media links -->
         <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 0; text-align: center">
@@ -101,6 +109,13 @@
                 <span>Akshita</span>
               </a>
             </li>
+            <li class="social-media">
+              <a target="_blank" href="https://twitter.com/akshitac8" itemprop="sameAs">
+                <i class="fab fa-fw fa-twitter" aria-hidden="true"></i>
+                <span>Akshita</span>
+              </a>
+            </li>
+            <!-- Blog-->
             <li class="social-media">
               <a target="_blank" href="https://twitter.com/akshitac8" itemprop="sameAs">
                 <i class="fab fa-fw fa-twitter" aria-hidden="true"></i>
@@ -120,25 +135,12 @@
     <!-- About -->
     <div class="col-md-8 col-sm-8 col-xs-12">
       <p>
-        I am a visiting research scholar at the Georgia Institute of Technology, supervised by
-        <a href="//cc.gatech.edu/~parikh">Prof. Devi Parikh</a> and
-        <a href="//cc.gatech.edu/~dbatra">Prof. Dhruv Batra</a>. I am primarily interested in
-        deep learning, at the intersection of computer vision and natural language processing.
-        Before my current position, I completed my undergraduate major in Electrical Engineering
-        and minor in Computer Science from Indian Institute of Technology, Roorkee.
-      </p>
-      <p>
-        During my undergraduate studies, I was selected twice as a Google Summer of Code student,
-        with TARDIS Foundation (<a href="//summerofcode.withgoogle.com/archive/2016/projects/4796129849901056/">2016</a>)
-        and the OpenCV Foundation (<a href="//summerofcode.withgoogle.com/projects/#4772305931599872/">2017</a>).
-        Parallel to my second Google Summer of Code, I was a software engineering intern at
-        Goldman Sachs, Bangalore. I was also an active member of the
-        <a href="http://mdg.iitr.ac.in/">Mobile Development Group IITR</a>, and co-founded a
-        reading group to encourage students towards reading academic literature, now named
-        <a href="https://vlgiitr.github.io">Vision and Language Group</a>.
+        I am a Research Engineer at Inception Institute of Artificial Intelligence, Abu Dhabi. I am primarily interested in deep learning, at the intersection 
+        of Speech & Audio processing, Computer Vision and natural language processing. Before my current position, I completed my bachelor's in Computer Science and Engineering from DIT University, Dehradun with a semester exchange at Indian Institute of Technology, Roorkee supervised by [Dr R Balasubramanian]().
+        During my undergraduate studies, In summers 2017, I was selected as a Machine Learning Intern at Indian Institute of Technology, Roorkee supervised by Dr R Balasubramanian and in summers 2018 as an Outreachy student, with Mozilla Organisation supervised by [Emma Irvin](). I was also an active member of Deeplearn-lab, open source research collaboration platform headed by [Mr Gaurav Bhatt]().  
       </p>
       <p style="margin-top: 20px">
-        Feel free to say hi: <b>kdexd at gatech dot edu</b>
+        Feel free to say hi: <b>akshita dot gupta at inceptioniai dot org</b>
       </p>
     </div>
   </div>
@@ -148,72 +150,65 @@
 
 <h2>News</h2>
 
-<p><strong>[Oct 2018]</strong> Visiting the annual Google Summer of Code mentor summit at Google Mountain View, CA.<br />
-<strong>[Jul 2018]</strong> Co-organizing the first <a href="https://visualdialog.org/challenge/2018">Visual Dialog challenge</a>, results to be announced at ECCV 2018.<br />
-<strong>[Jun 2018]</strong> Joining Georgia Tech as a visiting research scholar under the supervision of Prof. Devi Parikh and Prof. Dhruv Batra.<br />
-<strong>[May 2018]</strong> Graduated from Indian Institute of Technology Roorkee, major in Electrical Engineering.<br />
-<strong>[Apr 2018]</strong> Serving as a Google Summer of Code mentor with <a href="https://cloudcv.org">CloudCV</a>, mentoring one student for the <a href="https://fabrik.cloudcv.org">Fabrik</a> project.</p>
-
+<p><strong>[Dec 2018]</strong> Joined as a Research Engineer at Inception Institute of Artificial Intelligence, Abu Dhabi<br />
+<strong>[Aug 2018]</strong> Graduated from DIT University Dehradun, major in Computer Science and Engineering.<br />
+<strong>[May 2018]</strong> Outreachy student with Open Innovation Team, Mozilla<br/>
+<strong>[July 2018]</strong> Completed my semester exchange at Indian Institute of Technology Roorkee supervised by [Dr R Balasubramanian]().</p>
 <hr />
 
-<h2>Research</h2>
+<h2>Achievements</h2>
 
+<div name="achievements">
+
+<p><strong>[Dec 2018]</strong> Joined as a Research Engineer at Inception Institute of Artificial Intelligence, Abu Dhabi<br />
+<strong>[Aug 2018]</strong> Graduated from DIT University Dehradun, major in Computer Science and Engineering.<br />
+<strong>[May 2018]</strong> Outreachy student with Open Innovation Team, Mozilla<br/>
+<strong>[July 2018]</strong> Completed my semester exchange at Indian Institute of Technology Roorkee supervised by [Dr R Balasubramanian]().</p> 
+</div>
+<hr />
+
+<h2>Publications</h2>
+<div name ="publications">
 <div class="paper-container row">
   <!-- nocaps: novel object captioning at scale -->
   <div class="paper-title col-md-12 col-sm-12 col-xs-12">
-    nocaps: novel object captioning at scale
-  </div>
+Acoustic Features Fusion using Attentive Multi-channel Deep Architecture  </div>
   <!-- negative margin to account for superscripted asterisk -->
   <div class="paper-authors col-md-12 col-sm-12 col-xs-12" style="margin-top: -4px;">
-    Harsh Agrawal<sup>*</sup>, <b>Karan Desai</b><sup>*</sup>, Xinlei Chen, Rishabh Jain, Dhruv Batra, Devi Parikh, Stefan Lee, Peter Anderson
+    Gaurav Bhatt,<b>Akshita Gupta</b>, Aditya Arora, Balasubramanian Raman
   </div>
   <!-- arxiv and website link -->
   <div class="paper-links col-md-12 col-sm-12 col-xs-12">
-    <a class="paper-link button-div" href="//arxiv.org/abs/1812.08658" target="_blank">
-      arxiv/1812.08658
+    <a class="paper-link button-div" href="//www.isca-speech.org/archive/CHiME_2018/pdfs/CHiME_2018_paper_bhatt.pdf" target="_blank">
+      CHiME_2018
     </a>
-    <a class="paper-link button-div" href="//nocaps.org" target="_blank">
-      nocaps.org
+    <a class="paper-link button-div" href="github.com/DeepLearn-lab/Acoustic-Feature-Fusion_Chime18" target="_blank">
+      code
     </a>
-    <a class="paper-link button-div" href="/static/bibliography/nocaps_bibtex.txt" target="_blank">
-      bibtex
-    </a>
-    <a class="paper-link button-div" href="/static/bibliography/nocaps_natbib.txt" target="_blank">
-      natbib
+    <a class="paper-link button-div" href="drive.google.com/file/d/1sfMzuDgKXDeZWrLb4FDVbiRuKIWBP2SH/view" target="_blank">
+      slides
     </a>
   </div>
   <div class="paper-banner col-md-12 col-sm-12 col-xs-12">
-    <a href="//arxiv.org/abs/1812.08658" target="_blank"> <img src="/static/img/research/nocaps_banner.jpg" alt="nocaps paper" title="nocaps paper" /> </a>
+    <a href="//www.isca-speech.org/archive/CHiME_2018/pdfs/CHiME_2018_paper_bhatt.pdf" target="_blank"> <img src="/static/images/paper/img62.jpg" alt="chime paper" title="chime paper" /> </a>
   </div>
+</div>
 </div>
 
 <hr />
 
 <h2>Open Source</h2>
-
-<div class="projects-container row">
-  <!-- project: visdial challenge starter pytorch -->
-  <div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="project-container row">
-      <div class="project-title col-md-12 col-sm-12 col-xs-12">
-        visdial-challenge-starter-pytorch <div class="project-stars button-div" id="visdial-challenge-starter-pytorch-stars"></div>
-      </div>
-      <div class="project-description col-md-12 col-sm-12 col-xs-12">
-        Starter code for the Visual Dialog Challenge. Built using PyTorch v1.0 and provides out of the box support with CUDA 9 and CuDNN 7. Provides a simple implementation of Late Fusion encoder and Discriminative decoder. Complete with efficient scripts for data preprocessing, image feature extraction, training and evaluation, along with support to generate a submission file for the challenge.
-      </div>
-    </div>
-  </div>
-</div>
+<div name = "projects">
 
 <div class="projects-container row">
   <!-- project: lang-emerge-parlai -->
   <div class="col-md-6 col-sm-12 col-xs-12">
     <div class="project-container row">
       <div class="project-title col-md-12 col-sm-12 col-xs-12">
-        lang-emerge-parlai <div class="project-stars button-div" id="lang-emerge-parlai-stars"></div>
+       Audio-Vision <div class="project-stars button-div" id="lang-emerge-parlai-stars"></div>
       </div>
       <div class="project-description col-md-12 col-sm-12 col-xs-12">
-        Implementation of the paper "Natural Language Does Not Emerge 'Naturally' in Multi-Agent Dialog" by <a href="//arxiv.org/abs/1706.08502" target="_blank">Kottur et al (EMNLP 2017)</a>, using PyTorch and ParlAI.
+       Implementation and reviews of Audio & Computer vision related papers in python using keras and tensorflow.
       </div>
       <div class="project-banner col-md-12 col-sm-12 col-xs-12">
         <img src="/static/img/projects/lang_emerge_banner.jpg" alt="lang-emerge-parlai" title="language emergence" />
@@ -225,10 +220,10 @@
   <div class="col-md-6 col-sm-12 col-xs-12">
     <div class="project-container row">
       <div class="project-title col-md-12 col-sm-12 col-xs-12">
-        ntm-pytorch <div class="project-stars button-div" id="ntm-pytorch-stars"></div>
+        keras_aud <div class="project-stars button-div" id="ntm-pytorch-stars"></div>
       </div>
       <div class="project-description col-md-12 col-sm-12 col-xs-12">
-        Implementation of Neural Turing Machines introduced in <a href="//arxiv.org/abs/1410.5401" target="_blank">Graves et al (2014)</a>, using PyTorch. Supports training and evaluation on four out of six tasks described in the paper.
+        Neural networks audio toolkit for Keras with Tensorflow and Theano support
       </div>
       <div class="project-banner col-md-12 col-sm-12 col-xs-12">
         <img src="/static/img/projects/ntm_banner.jpg" alt="ntm-pytorch" title="neural turing machines" />
@@ -242,73 +237,26 @@
   <div class="col-md-6 col-sm-12 col-xs-12">
     <div class="project-container row">
       <div class="project-title col-md-12 col-sm-12 col-xs-12">
-        trianglify <div class="project-stars button-div" id="trianglify-stars"></div>
+        Handwriting_Generation <div class="project-stars button-div" id="trianglify-stars"></div>
       </div>
       <div class="project-description col-md-12 col-sm-12 col-xs-12">
-        Trianglify is a highly customizable library to generate beautiful triangle art views for android. Uses the Delaunay Triangulation algorithm behind the curtains.
+        Handwriting Generation using recurrent neural network in Pytorch.
       </div>
       <div class="project-banner col-md-12 col-sm-12 col-xs-12">
         <img src="/static/img/projects/trianglify_banner.jpg" alt="trianglify" title="trianglify" />
       </div>
     </div>
   </div>
-
-  <!-- project: yolog -->
-  <div class="col-md-6 col-sm-12 col-xs-12">
-    <div class="project-container row">
-      <div class="project-title col-md-12 col-sm-12 col-xs-12">
-        yolog <div class="project-stars button-div" id="yolog-stars"></div>
-      </div>
-      <div class="project-description col-md-12 col-sm-12 col-xs-12">
-        Yolog wraps over vanilla git log and displays commit history complete with graph, timestamp, author and refs. Colors are configurable, and all standard git log commands work.
-      </div>
-      <div class="project-banner col-md-12 col-sm-12 col-xs-12">
-        <img src="/static/img/projects/yolog_banner.jpg" alt="yolog" title="yolog" />
-      </div>
-    </div>
-  </div>
 </div>
-
+</div>
 <hr />
-
-<h2>First Projects</h2>
-
-<div class="projects-container row">
-  <!-- project: digit classifier -->
-  <div class="col-md-6 col-sm-12 col-xs-12">
-    <div class="project-container side-banner row">
-      <div class="col-md-9 col-sm-9 col-xs-12">
-        <div class="project-title side-banner">
-          digit-classifier <div class="project-stars button-div" id="digit-classifier-stars"></div>
-        </div>
-        <span class="project-description">
-          First neural network built using numpy (2015), a multi layer perceptron classifier for MNIST. This repository stayed on Github trending charts for almost a week, with <b>600+ stars</b>.
-        </span>
-      </div>
-      <div class="side-banner col-md-3 col-sm-3 col-xs-12">
-        <img src="/static/img/projects/digit_banner.jpg" alt="digit-classifier" title="digit classifier" />
-      </div>
-    </div>
-  </div>
-
-  <!-- project: snake -->
-  <div class="col-md-6 col-sm-12 col-xs-12">
-    <div class="project-container side-banner row">
-      <div class="col-md-9 col-sm-9 col-xs-12">
-        <div class="project-title side-banner">
-          snake <div class="project-stars button-div" id="snake-stars"></div>
-        </div>
-        <span class="project-description">
-          First github repository (2015), browser based game of snake. During my first year of undergrad studies. The game still works on <a href="//kdexd.github.io/snake" target="_blank">gh-pages</a>!
-        </span>
-      </div>
-      <div class="side-banner col-md-3 col-sm-3 col-xs-12">
-        <img src="/static/img/projects/snake_banner.jpg" alt="snake" title="snake" />
-      </div>
-    </div>
-  </div>
+<h2>Experience</h2>
+<div name = "experience">
 </div>
-
+<hr />
+<h2>Education</h2>
+<div name = "education">
+</div>
 <p><br /></p>
 
 <!-- Show github stars beside projects -->
@@ -330,13 +278,9 @@
     xhr.send();
   }
 
-  githubStars("batra-mlp-lab", "visdial-challenge-starter-pytorch");
-  githubStars("kdexd", "lang-emerge-parlai");
-  githubStars("vlgiitr", "ntm-pytorch");
-  githubStars("mdg-iitr", "trianglify");
-  githubStars("kdexd", "yolog");
-  githubStars("kdexd", "digit-classifier");
-  githubStars("kdexd", "snake");
+  githubStars("channelcs", "Audio-Vision");
+  githubStars("channelcs", "keras_aud");
+  githubStars("akshitac8", "Handwriting_Generation");
 </script>
 
 
