@@ -211,10 +211,6 @@ hr {
 		max-width: 100%
 	}
 
-	body {
-		padding-top: 100px
-	}
-
 	.social media {
 		font-size: 12px
 	}
@@ -224,10 +220,6 @@ hr {
 @media (max-width:500px) {
 	.container {
 		max-width: 100%
-	}
-
-	body {
-		padding-top: 100px
 	}
 
 	#site-title {
