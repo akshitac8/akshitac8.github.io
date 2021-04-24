@@ -19,14 +19,14 @@
     <meta property="og:image:width" content="682">
     <meta property="og:image:height" content="682">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jonbarron.info/mipnerf/"/>
-    <meta property="og:title" content="mip-NeRF" />
-    <meta property="og:description" content="Project page for Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields." />
+    <meta property="og:url" content="https://akshitac8.github.io/tfvaegan/"/>
+    <meta property="og:title" content="TF-VAEGAN" />
+    <meta property="og:description" content="Project page for Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification" />
 
         <!--TWITTER-->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="mip-NeRF" />
-    <meta name="twitter:description" content="Project page for Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields." />
+    <meta name="twitter:title" content="TF-VAEGAN" />
+    <meta name="twitter:description" content="Project page for Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification" />
     <meta name="twitter:image" content="https://jonbarron.info/mipnerf/img/rays_square.png" />
 
 
@@ -53,9 +53,9 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b>Mip-NeRF</b>: A Multiscale Representation <br> for Anti-Aliasing Neural Radiance Fields</br> 
+                Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification
                 <small>
-                    arXiv 2021
+                    ECCV 2020
                 </small>
             </h2>
         </div>
@@ -63,40 +63,34 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-                        <a href="https://jonbarron.info/">
-                          Jonathan T. Barron
+                        <a href="https://sites.google.com/view/sanath-narayan/home">
+                          Sanath Narayan<sup>*</sup>
                         </a>
-                        </br>Google
+                        </br>IIAI
                     </li>
                     <li>
                         <a href="http://bmild.github.io/">
-                            Ben Mildenhall
+                            Akshita Gupta
                         </a>
-                        </br>Google
+                        </br>IIAI
                     </li>
                     <li>
-                        <a href="http://matthewtancik.com/">
-                          Matthew Tancik
+                        <a href="https://sites.google.com/view/fahadkhans/home">
+                            Fahad Shahbaz Khan
                         </a>
-                        </br>UC Berkeley
+                        </br>IIAI, MBZUAI
                     </li><br>
                     <li>
-                        <a href="https://phogzone.com/">
-                          Peter Hedman
+                        <a href="https://www.ceessnoek.info/">
+                          Cees G. M. Snoek
                         </a>
-                        </br>Google
+                        </br>UvA
                     </li>
                     <li>
-                        <a href="http://www.ricardomartinbrualla.com/">
-                          Ricardo Martin-Brualla
+                        <a href="https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=en">
+                          Ling Shao
                         </a>
-                        </br>Google
-                    </li>
-                    <li>
-                        <a href="https://pratulsrinivasan.github.io/">
-                          Pratul P. Srinivasan
-                        </a>
-                        </br>Google
+                        </br>IIAI, MBZUAI
                     </li>
                 </ul>
             </div>
@@ -107,23 +101,23 @@
                 <div class="col-md-4 col-md-offset-4 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="https://arxiv.org/abs/2103.13415">
-                            <image src="img/mip_paper_image.jpg" height="60px">
+                            <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123670477.pdf">
+                            <image src="img/tfavegan_min_paper.jpg" height="60px">
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="https://youtu.be/EpH175PY1A0">
+                            <a href="https://www.youtube.com/watch?v=tNmyfKVUIpo">
                             <image src="img/youtube_icon.png" height="60px">
                                 <h4><strong>Video</strong></h4>
                             </a>
                         </li>
-                        <!-- <li>
-                            <a href="https://github.com/">
+                        <li>
+                            <a href="https://github.com/akshitac8/tfvaegan">
                             <image src="img/github.png" height="60px">
                                 <h4><strong>Code</strong></h4>
                             </a>
-                        </li> -->
+                        </li>
                     </ul>
                 </div>
         </div>
@@ -133,32 +127,38 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Abstract
+                    Papers With Code Badges
                 </h3>
-                <image src="img/rays.png" class="img-responsive" alt="overview"><br>
+                <image src="img/papers_with_code_badge.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
-The rendering procedure used by neural radiance fields (NeRF) samples a scene with a single ray per pixel and may therefore produce renderings that are excessively blurred or aliased when training or testing images observe scene content at different resolutions. The straightforward solution of supersampling by rendering with multiple rays per pixel is impractical for NeRF, because rendering each ray requires querying a multilayer perceptron hundreds of times. Our solution, which we call "mip-NeRF" (à la "mipmap"), extends NeRF to represent the scene at a continuously-valued scale.
-By efficiently rendering anti-aliased conical frustums instead of rays, mip-NeRF reduces objectionable aliasing artifacts and significantly improves NeRF's ability to represent fine details, while also being 7% faster than NeRF and half the size.
-Compared to NeRF, mip-NeRF reduces average error rates by 16% on the dataset presented with NeRF and by 60% on a challenging multiscale variant of that dataset that we present. mip-NeRF is also able to match the accuracy of a brute-force supersampled NeRF on our multiscale dataset while being 22x faster.
+                    Our proposed method TF-VAEGAN, current state-of-the-art for ZSL and GZSL (as seen from the above badges). Please do consider adding recent ZSL or GZSL results to the same.
                 </p>
             </div>
         </div>
 
-
-
-        <div class="row">
+         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Video
+                    Video/Overview
                 </h3>
                 <div class="text-center">
                     <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://www.youtube.com/embed/EpH175PY1A0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                        <iframe src="https://www.youtube.com/watch?v=tNmyfKVUIpo" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+Zero-shot learning strives to classify unseen categories for which no data is available during training. In the generalized variant, the test samples can further belong to seen or unseen categories. The state-of-the-art relies on Generative Adversarial Networks that synthesize unseen class features by leveraging class-specific semantic embeddings. During training, they generate semantically consistent features, but discard this constraint during feature synthesis and classification. We propose to enforce semantic consistency at all stages of (generalized) zero-shot learning: training, feature synthesis and classification. We first introduce a feedback loop, from a semantic embedding decoder, that iteratively refines the generated features during both the training and feature synthesis stages. The synthesized features together with their corresponding latent embeddings from the decoder are then transformed into discriminative features and utilized during classification to reduce ambiguities among categories. Experiments on (generalized) zero-shot object and action classification reveal the benefit of semantic consistency and iterative feedback, outperforming existing methods on six zero-shot learning benchmarks.
+                </p>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
