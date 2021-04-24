@@ -157,6 +157,7 @@
                 <p class="text-justify">
 Zero-shot learning strives to classify unseen categories for which no data is available during training. In the generalized variant, the test samples can further belong to seen or unseen categories. The state-of-the-art relies on Generative Adversarial Networks that synthesize unseen class features by leveraging class-specific semantic embeddings. During training, they generate semantically consistent features, but discard this constraint during feature synthesis and classification. We propose to enforce semantic consistency at all stages of (generalized) zero-shot learning: training, feature synthesis and classification. We first introduce a feedback loop, from a semantic embedding decoder, that iteratively refines the generated features during both the training and feature synthesis stages. The synthesized features together with their corresponding latent embeddings from the decoder are then transformed into discriminative features and utilized during classification to reduce ambiguities among categories. Experiments on (generalized) zero-shot object and action classification reveal the benefit of semantic consistency and iterative feedback, outperforming existing methods on six zero-shot learning benchmarks.
                 </p>
+                <image src="img/paper_arch.png" class="img-responsive" alt="overview"><br>
             </div>
         </div>
 
@@ -166,28 +167,22 @@ Zero-shot learning strives to classify unseen categories for which no data is av
                     Results
                 </h3>
                 <p class="text-justify">
-                    We train NeRF and mip-NeRF on a dataset with images at four different resolutions. Normal NeRF (left) is not capable of learning to represent the same scene at multiple levels of detail, with blurring in close-up shots and aliasing in low resolution views, while mip-NeRF (right) both preserves sharp details in close-ups and correctly renders the zoomed-out images.
+                   Below you will find quantitative results for ZSL and GZSL classification in comparison with the previous methods.
                 </p>                
                 <br>
-                <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/ship_sbs_path1.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/chair_sbs_path1.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/lego_sbs_path1.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/mic_sbs_path1.mp4" type="video/mp4" />
-                </video>
-                <br><br>
+                <image src="img/table_results.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
-                    We can also manipulate the integrated positional encoding by using a larger or smaller radius than the true pixel footprint, exposing the continuous level of detail learned within a single network:
-                </p>     
-                <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/lego_radii_manip_slider_200p.mp4" type="video/mp4" />
-                </video>
+                   Below you will find results for image reconstruction from generated features.
+                </p>                
+                <br>
+                <image src="img/reconstruction.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                   Below you will find qualitative results for ZSL and GZSL classification in comparison with the previous methods.
+                </p>                
+                <br>
+                <image src="img/classification_1.png" class="img-responsive" alt="overview"><br>
+                <image src="img/rclassification_2.png" class="img-responsive" alt="overview"><br>
+                <br><br>
             </div>
         </div>
     
