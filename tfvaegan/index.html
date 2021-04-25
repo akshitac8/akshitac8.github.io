@@ -167,11 +167,7 @@ Zero-shot learning strives to classify unseen categories for which no data is av
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    <b>Results</b>
-                </h3>
-                <br>
-                <h3>
-                    <b>Classification</b>
+                    <b>Classification Results</b>
                 </h3>
                 <p class="text-justify">
                    Below you will find quantitative results for ZSL and GZSL classification in comparison with the previous methods.
@@ -179,16 +175,21 @@ Zero-shot learning strives to classify unseen categories for which no data is av
                 <br>
                 <image src="img/table_results.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
-                   Below you will find qualitative results for ZSL and GZSL classification in comparison with the previous methods.
+                   Below you will find qualitative results for ZSL and GZSL classification in comparison with the previous methods. 
+                   The top row shows different variations of the ground-truth class instances, the second and third rows show the classification predictions by the baseline and proposed approaches, respectively.
+                   The <p style="color:green">green</p> and <p style="color:red">red</p> boxes denote correct and incorrect classification predictions, respectively.
+                   The class names under each red box show the corresponding incorrectly predicted label. 
                 </p>                
                 <br>
                 <image src="img/classification_1.png" class="img-responsive" alt="overview"><br>
                 <image src="img/classification_2.png" class="img-responsive" alt="overview"><br>
                 <h3>
-                    <b>Image Reconstruction</b>
+                    <b>Image Reconstruction Results</b>
                 </h3>
                 <p class="text-justify">
-                   Below you will find results for image reconstruction from generated features.
+                   Below you will find inverted images of Baseline synthesized features and our Feedback synthesized features on four example classes of oxford-flowers dataset.
+                   These observations suggest that our Feedback improves the quality of synthesized features over the Baseline, where no feedback is present. 
+                   Best viewed in color and zoom.
                 </p>                
                 <br>
                 <image src="img/reconstruction.png" class="img-responsive" alt="overview"><br>
