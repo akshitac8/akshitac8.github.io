@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>TF-VAEGAN</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--FACEBOOK-->
+    <meta property="og:image" content="https://akshitac8.github.io/tfvaegan/img/classification_1.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="682">
+    <meta property="og:image:height" content="682">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://akshitac8.github.io/tfvaegan/"/>
+    <meta property="og:title" content="TF-VAEGAN" />
+    <meta property="og:description" content="Project page for Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification" />
+
+        <!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TF-VAEGAN" />
+    <meta name="twitter:description" content="Project page for Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification" />
+    <meta name="twitter:image" content="https://akshitac8.github.io/tfvaegan/img/classification_1.png" />
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <b>Latent Embedding Feedback and Discriminative <br> Features for Zero-Shot Classification </br></b>
+                <small>
+                    <b>ECCV 2020</b>
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://sites.google.com/view/sanath-narayan/home">
+                          <b>Sanath Narayan<sup>*</sup></b>
+                        </a>
+                        </br><b>IIAI</b>
+                    </li>
+                    <li>
+                        <a href="http://bmild.github.io/">
+                            <b>Akshita Gupta<sup>*</sup></b>
+                        </a>
+                        </br><b>IIAI</b>
+                    </li>
+                    <li>
+                        <a href="https://sites.google.com/view/fahadkhans/home">
+                            <b>Fahad Shahbaz Khan</b>
+                        </a>
+                        </br><b>IIAI, MBZUAI</b>
+                    </li><br><br>
+                    <li>
+                        <a href="https://www.ceessnoek.info/">
+                          <b>Cees G. M. Snoek</b>
+                        </a>
+                        </br><b>UvA</b>
+                    </li>
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=en">
+                          <b>Ling Shao</b>
+                        </a>
+                        </br><b>IIAI, MBZUAI</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123670477.pdf">
+                            <image src="img/tfavegan_min_paper.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/drive/folders/16Xk1eFSWjQTtuQivTogMmvL3P6F_084u?usp=sharing">
+                            <image src="img/drive_icon.png" height="60px">
+                                <h4><strong>Image training data</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/drive/folders/1pNlnL3LFSkXkJNkTHNYrQ3-Ie4vvewBy?usp=sharing">
+                            <image src="img/drive_icon.png" height="60px">
+                                <h4><strong>Action training data</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/akshitac8/tfvaegan">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <b>Paperswithcode Badges</b>
+                </h3>
+                    <image src="img/papers_with_code_badge.png" class="img-responsive" alt="overview"><br>                <p class="text-justify">
+                    Our proposed method TF-VAEGAN, current state-of-the-art for ZSL and GZSL (as seen from the above badges). Please do consider adding recent ZSL or GZSL results to the same.
+                </p>
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <b>Video/Overview</b>
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://www.youtube.com/embed/tNmyfKVUIpo" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <b>Abstract</b>
+                </h3>
+                <p class="text-justify">
+Zero-shot learning strives to classify unseen categories for which no data is available during training. In the generalized variant, the test samples can further belong to seen or unseen categories. The state-of-the-art relies on Generative Adversarial Networks that synthesize unseen class features by leveraging class-specific semantic embeddings. During training, they generate semantically consistent features, but discard this constraint during feature synthesis and classification. We propose to enforce semantic consistency at all stages of (generalized) zero-shot learning: training, feature synthesis and classification. We first introduce a feedback loop, from a semantic embedding decoder, that iteratively refines the generated features during both the training and feature synthesis stages. The synthesized features together with their corresponding latent embeddings from the decoder are then transformed into discriminative features and utilized during classification to reduce ambiguities among categories. Experiments on (generalized) zero-shot object and action classification reveal the benefit of semantic consistency and iterative feedback, outperforming existing methods on six zero-shot learning benchmarks.
+                </p>
+                <image src="img/paper_arch.png" class="img-responsive" alt="overview"><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <b>Classification Results</b>
+                </h3>
+                <p class="text-justify">
+                   Below you will find quantitative results for ZSL and GZSL classification in comparison with the previous methods.
+                </p>                
+                <br>
+                <image src="img/table_results.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                   Below you will find qualitative results for ZSL and GZSL classification in comparison with the previous methods. 
+                   The top row shows different variations of the ground-truth class instances, the second and third rows show the classification predictions by the baseline and proposed approaches, respectively.
+                   The <font style="color:green">green</font> and <font style="color:red">red</font> boxes denote correct and incorrect classification predictions, respectively.
+                   The class names under each red box show the corresponding incorrectly predicted label. 
+                </p>                
+                <br>
+                <image src="img/classification_1.png" class="img-responsive" alt="overview"><br>
+                <image src="img/classification_2.png" class="img-responsive" alt="overview"><br>
+                <h3>
+                    <b>Image Reconstruction Results</b>
+                </h3>
+                <p class="text-justify">
+                   Below you will find inverted images of Baseline synthesized features and our Feedback synthesized features on four example classes of oxford-flowers dataset.
+                   These observations suggest that our Feedback improves the quality of synthesized features over the Baseline, where no feedback is present. 
+                   <b>Best viewed in color and zoom.</b>
+                </p>                
+                <br>
+                <image src="img/reconstruction.png" class="img-responsive center-block" alt="overview"><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <b>Citation</b>
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@inproceedings{narayan2020latent,
+    title={Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification},
+    author={Narayan, Sanath and Gupta, Akshita and Khan, Fahad Shahbaz and Snoek, Cees GM and Shao, Ling},
+    booktitle={ECCV},
+    year={2020}
+}</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
