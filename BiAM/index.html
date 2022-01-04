@@ -14,20 +14,20 @@
     <!-- <base href="/"> -->
 
         <!--FACEBOOK-->
-    <meta property="og:image" content="https://akshitac8.github.io/tfvaegan/img/classification_1.png">
+    <!-- <meta property="og:image" content="https://akshitac8.github.io/tfvaegan/img/classification_1.png"> -->
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="682">
     <meta property="og:image:height" content="682">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://akshitac8.github.io/tfvaegan/"/>
+    <meta property="og:url" content="https://akshitac8.github.io/BiAM/"/>
     <meta property="og:title" content="BiAM" />
-    <meta property="og:description" content="Project page for Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification" />
+    <meta property="og:description" content="Project page for Discriminative Region-based Multi-Label Zero-Shot Learning" />
 
         <!--TWITTER-->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="BiAM" />
-    <meta name="twitter:description" content="Project page for Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification" />
-    <meta name="twitter:image" content="https://akshitac8.github.io/tfvaegan/img/classification_1.png" />
+    <meta name="twitter:description" content="Project page for Discriminative Region-based Multi-Label Zero-Shot Learning" />
+    <!-- <meta name="twitter:image" content="https://akshitac8.github.io/tfvaegan/img/classification_1.png" /> -->
 
 
 <!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
@@ -69,7 +69,7 @@
                         </br><b>IIAI</b>
                     </li>
                     <li>
-                        <a href="http://bmild.github.io/">
+                        <a href="http://akshitac8.github.io/">
                             <b>Akshita Gupta<sup>*</sup></b>
                         </a>
                         </br><b>IIAI</b>
@@ -106,10 +106,17 @@
                     <ul class="nav nav-pills nav-justified">
                         <li>
                             <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Narayan_Discriminative_Region-Based_Multi-Label_Zero-Shot_Learning_ICCV_2021_paper.pdf">
-                            <image src="img/tfavegan_min_paper.png" height="60px">
+                            <image src="img/BiAM_min_paper.png" height="60px">
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
+                        <li>
+                            <a href="https://docs.google.com/presentation/d/1RDMokGV8pMUdKjhD_JLa0OVpPpUKLLBaUkhhRXMNLtA/edit?usp=sharing">
+                            <image src="img/ppt_icon.png" height="60px">
+                                <h4><strong>Presentation</strong></h4>
+                            </a>
+                        </li>
+
                        <!--  <li>
                             <a href="https://drive.google.com/drive/folders/16Xk1eFSWjQTtuQivTogMmvL3P6F_084u?usp=sharing">
                             <image src="img/drive_icon.png" height="60px">
@@ -127,7 +134,7 @@
                             <image src="img/github.png" height="60px">
                                 <h4><strong>Code</strong></h4>
                             </a>
-                        </li>
+                        </li> 
                     </ul>
                 </div>
         </div>
@@ -139,20 +146,22 @@
                 <h3>
                     <b>Paperswithcode Badges</b>
                 </h3>
-                    <image src="img/papers_with_code_badge.png" class="img-responsive" alt="overview"><br>                <p class="text-justify">
-                    Our proposed method TF-VAEGAN, current state-of-the-art for ZSL and GZSL (as seen from the above badges). Please do consider adding recent ZSL or GZSL results to the same.
-                </p>
+                    <image src="img/papers_with_code_badge_biam.png" class="img-responsive" alt="overview"><br>                
+                    <p class="text-justify">
+                    Our proposed approach achieves state-of-the-art for ZSL and GZSL tasks (as seen from the above badges). Please do consider adding recent ZSL or GZSL results to the same.
+<!--                     , current state-of-the-art for ZSL and GZSL (as seen from the above badges). Please do consider adding recent ZSL or GZSL results to the same.
+ -->                </p>
             </div>
         </div>
 
          <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    <b>Video/Overview</b>
+                    <b>Video</b>
                 </h3>
                 <div class="text-center">
                     <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://www.youtube.com/embed/tNmyfKVUIpo" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                        <iframe src="https://youtu.be/0MZxWozdRiM" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                     </div>
                 </div>
             </div>
@@ -164,7 +173,7 @@
                     <b>Abstract</b>
                 </h3>
                 <p class="text-justify">
-Zero-shot learning strives to classify unseen categories for which no data is available during training. In the generalized variant, the test samples can further belong to seen or unseen categories. The state-of-the-art relies on Generative Adversarial Networks that synthesize unseen class features by leveraging class-specific semantic embeddings. During training, they generate semantically consistent features, but discard this constraint during feature synthesis and classification. We propose to enforce semantic consistency at all stages of (generalized) zero-shot learning: training, feature synthesis and classification. We first introduce a feedback loop, from a semantic embedding decoder, that iteratively refines the generated features during both the training and feature synthesis stages. The synthesized features together with their corresponding latent embeddings from the decoder are then transformed into discriminative features and utilized during classification to reduce ambiguities among categories. Experiments on (generalized) zero-shot object and action classification reveal the benefit of semantic consistency and iterative feedback, outperforming existing methods on six zero-shot learning benchmarks.
+Multi-label zero-shot learning (ZSL) is a more realistic counter-part of standard single-label ZSL since several objects can co-exist in a natural image. However, the occurrence of multiple objects complicates the reasoning and requires region-specific processing of visual features to preserve their contextual cues. We note that the best existing multi-label ZSL method takes a shared approach towards attending to region features with a common set of attention maps for all the classes. Such shared maps lead to diffused attention, which does not discriminatively focus on relevant locations when the number of classes are large. Moreover, mapping spatially-pooled visual features to the class semantics leads to inter-class feature entanglement, thus hampering the classification. Here, we propose an alternate approach towards region-based discriminability- preserving multi-label zero-shot classification. Our approach maintains the spatial resolution to preserve region-level characteristics and utilizes a bi-level attention module (BiAM) to enrich the features by incorporating both region and scene context information.
                 </p>
                 <image src="img/paper_arch.png" class="img-responsive" alt="overview"><br>
             </div>
@@ -173,23 +182,26 @@ Zero-shot learning strives to classify unseen categories for which no data is av
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    <b>Classification Results</b>
+                    <b>Attention Visualization</b>
                 </h3>
-                <p class="text-justify">
+               <!--  <p class="text-justify">
                    Below you will find quantitative results for ZSL and GZSL classification in comparison with the previous methods.
                 </p>                
                 <br>
-                <image src="img/table_results.png" class="img-responsive" alt="overview"><br>
+                <image src="img/table_results.png" class="img-responsive" alt="overview"><br> -->
                 <p class="text-justify">
-                   Below you will find qualitative results for ZSL and GZSL classification in comparison with the previous methods. 
+
+                   Below you will find qualitative results with attention maps for (generalized) zero-shot classification.
+                   For each image, class-specific maps for the ground truth unseen classes are shown with the corresponding labels on top.
+                   <!-- Below you will find qualitative results for ZSL and GZSL classification in comparison with the previous methods. 
                    The top row shows different variations of the ground-truth class instances, the second and third rows show the classification predictions by the baseline and proposed approaches, respectively.
                    The <font style="color:green">green</font> and <font style="color:red">red</font> boxes denote correct and incorrect classification predictions, respectively.
-                   The class names under each red box show the corresponding incorrectly predicted label. 
+                   The class names under each red box show the corresponding incorrectly predicted label. --> 
                 </p>                
                 <br>
-                <image src="img/classification_1.png" class="img-responsive" alt="overview"><br>
-                <image src="img/classification_2.png" class="img-responsive" alt="overview"><br>
-                <h3>
+                <image src="img/nus_wide.png" class="img-responsive" alt="overview" align="right"><br>
+                <image src="img/openimages.png" class="img-responsive" alt="overview" align="right"><br>
+               <!--  <h3>
                     <b>Image Reconstruction Results</b>
                 </h3>
                 <p class="text-justify">
@@ -198,7 +210,7 @@ Zero-shot learning strives to classify unseen categories for which no data is av
                    <b>Best viewed in color and zoom.</b>
                 </p>                
                 <br>
-                <image src="img/reconstruction.png" class="img-responsive center-block" alt="overview"><br>
+                <image src="img/reconstruction.png" class="img-responsive center-block" alt="overview"><br> -->
             </div>
         </div>
 
@@ -209,12 +221,13 @@ Zero-shot learning strives to classify unseen categories for which no data is av
                 </h3>
                 <div class="form-group col-md-10 col-md-offset-1">
                     <textarea id="bibtex" class="form-control" readonly>
-@inproceedings{narayan2020latent,
-    title={Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification},
-    author={Narayan, Sanath and Gupta, Akshita and Khan, Fahad Shahbaz and Snoek, Cees GM and Shao, Ling},
-    booktitle={ECCV},
-    year={2020}
-}</textarea>
+@inproceedings{narayan2021discriminative,
+  title={Discriminative region-based multi-label zero-shot learning},
+  author={Narayan, Sanath and Gupta, Akshita and Khan, Salman and Khan, Fahad Shahbaz and Shao, Ling and Shah, Mubarak},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={8731--8740},
+  year={2021}}
+</textarea>
                 </div>
             </div>
         </div>
