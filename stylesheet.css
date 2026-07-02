@@ -144,13 +144,13 @@ p#namechange:hover span#b {
 }
 
 .news-container {
-  max-width: 100%; /* Adjust width to 90% of the container */
-  width: 900px; /* Fixed width for larger screens */
-  max-height: 250px; /* Adjust height for better visibility */
-  overflow-y: auto; /* Enables vertical scrolling */
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  border: 1px solid #ddd; /* Optional: Adds a border */
-  padding: 15px;
-  background-color: #f9f9f9; /* Optional: Light background */
-  margin: 0 auto; /* Centers the container */
+  max-width: 100%;
+  width: 800px;
+  max-height: 340px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #e0e0e0;
+  padding: 16px 18px;
+  background-color: #fafafa;
+  margin: 0 auto 28px;
 }

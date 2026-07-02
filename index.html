@@ -6,16 +6,26 @@
     <meta content="Akshita Gupta" name="author">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="stylesheet.css" rel="stylesheet" type="text/css">
-    <link href="images/seal_icon.png" rel="icon" type="image/png">
+    <link href="images/profile_aks.png" rel="icon" type="image/png">
     <style>
-        /* Apply Inter font to the entire page */
-        body {
-            font-family: 'calibri', sans-serif;
+        /* Consistent typography across the whole page (overrides stylesheet.css Lato) */
+        body, h1, h2, h3, h4, h5, p, td, th, tr, li, ul, a, strong, b, em, span, div, name {
+            font-family: calibri, sans-serif;
+        }
+        /* Prevent single-word orphans on the last line, responsively (no manual <br> needed) */
+        p, li, .publication-note {
+            text-wrap: pretty;
+        }
+        h1, h2, h3, .paper-title, name {
+            text-wrap: balance;
         }
         #myimg {
             width: 100%;
-            max-width: 100%;
-            border-radius: 50%;
+            max-width: 265px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 18px;
             border: 1px solid #ddd;
             padding: 5px;
         }
@@ -26,6 +36,270 @@
         ul li {
             font-size: 16px;
             line-height: 1.6;
+        }
+        .logo-strip {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            column-gap: 40px;
+            row-gap: 34px;
+            margin: 30px 0 34px;
+            /* full-bleed: let the logo band be wider than the 800px text column */
+            width: min(1050px, calc(100vw - 24px));
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .logo-tile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+        .logo-mark {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-mark img {
+            height: 80px;
+            width: auto;
+            max-width: 240px;
+            object-fit: contain;
+            display: block;
+        }
+        .logo-date {
+            margin-top: 14px;
+            font-size: 15px;
+        }
+        .logo-break {
+            flex-basis: 100%;
+            height: 0;
+        }
+        .publication-note {
+            padding: 16px 20px;
+            width: 70%;
+            vertical-align: middle;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .publication-note .paper-title {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 4px;
+        }
+        /* author names are <a>/<strong>, which stylesheet.css forces to 14px — restore them */
+        .publication-note a:not(.link-badge),
+        .publication-note strong {
+            font-size: 16px;
+        }
+        .publication-image-cell {
+            padding: 18px 20px;
+            width: 30%;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .publication-image-cell img {
+            max-width: 100%;
+            max-height: 130px;
+            height: auto;
+            object-fit: contain;
+        }
+        .paper-placeholder {
+            aspect-ratio: 4 / 3;
+            width: 100%;
+            max-width: 165px;
+            margin: 0 auto;
+            display: grid;
+            place-items: center;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #eef4fb 0%, #e6ecf5 100%);
+            color: #0071C5;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: .3px;
+            line-height: 1.3;
+            text-align: center;
+        }
+        .news-container table,
+        .news-container td,
+        .news-container a,
+        .news-container strong {
+            font-size: 16px !important;
+        }
+        .news-container table {
+            line-height: 1.6 !important;
+        }
+        .news-container td:first-child {
+            width: 88px;
+            white-space: nowrap;
+            vertical-align: top;
+        }
+        .news-container td:last-child {
+            vertical-align: top;
+        }
+        .pub-year {
+            margin: 22px 0 4px 10px;
+            color: #555;
+            font-family: calibri, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        .pub-year + table {
+            margin-top: 0 !important;
+        }
+        .pub-year ~ table {
+            margin-bottom: 16px !important;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        h2 {
+            border-left: 4px solid #0071C5;
+            padding-left: 12px;
+            margin-top: 46px;
+            margin-bottom: 18px;
+            color: #1a1a1a;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        a {
+            transition: color .15s ease, opacity .15s ease;
+        }
+        a:hover {
+            text-decoration: underline !important;
+            opacity: .85;
+        }
+        #myimg {
+            box-shadow: 0 6px 22px rgba(0, 0, 0, .14);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        #myimg:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, .18);
+        }
+        .coffee-note {
+            margin: 10px 10px 4px;
+            text-align: left;
+            font-family: calibri, sans-serif;
+            font-size: 15px;
+            font-style: italic;
+            color: #6f4e37;
+        }
+        .coffee-note .cup {
+            display: inline-block;
+            font-style: normal;
+            transform-origin: 50% 90%;
+            animation: coffee-wiggle 1.8s ease-in-out infinite;
+        }
+        @keyframes coffee-wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            20% { transform: rotate(-14deg); }
+            60% { transform: rotate(12deg); }
+        }
+        .coffee-note a.coffee-cta {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            color: #fff !important;
+            background: linear-gradient(135deg, #6f4e37 0%, #b07d56 100%);
+            padding: 3px 12px;
+            border-radius: 14px;
+            text-decoration: none !important;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(111, 78, 55, .25);
+            transition: transform .15s ease, box-shadow .15s ease;
+        }
+        .coffee-note a.coffee-cta:hover {
+            transform: translateY(-1px) rotate(-2deg) scale(1.04);
+            box-shadow: 0 4px 14px rgba(111, 78, 55, .35);
+            text-decoration: none !important;
+        }
+        .coffee-caption {
+            margin: 12px auto 0;
+            max-width: 265px;
+            text-align: center;
+        }
+        .coffee-caption a {
+            font-family: calibri, sans-serif;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 700;
+            color: #6f4e37 !important;
+            text-decoration: none !important;
+            display: inline-block;
+            transition: transform .15s ease;
+        }
+        .coffee-caption a:hover {
+            transform: scale(1.05);
+            text-decoration: none !important;
+        }
+        .coffee-caption .cup {
+            display: inline-block;
+            font-style: normal;
+            transform-origin: 50% 90%;
+            animation: coffee-wiggle 1.8s ease-in-out infinite;
+        }
+        .venue-tag {
+            display: inline-block;
+            padding: 3px 11px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .2px;
+            background: #eef4fb;
+            color: #0071C5;
+            vertical-align: middle;
+            margin: 2px 6px 2px 0;
+        }
+        .venue-tag.review {
+            background: #f0f0f0;
+            color: #666;
+        }
+        .venue-tag.oral {
+            background: #fdecec;
+            color: #d6332e;
+        }
+        .link-badge {
+            display: inline-block;
+            padding: 3px 11px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .2px;
+            background: #0071C5;
+            color: #fff !important;
+            text-decoration: none !important;
+            vertical-align: middle;
+            margin: 2px 6px 2px 0;
+            transition: opacity .15s ease;
+        }
+        .link-badge:hover {
+            opacity: .85;
+            text-decoration: none !important;
+        }
+        @media (max-width: 700px) {
+            .logo-strip {
+                column-gap: 24px;
+                row-gap: 22px;
+            }
+            .logo-mark,
+            .logo-mark img {
+                height: 46px;
+            }
+            .logo-mark img {
+                max-width: 130px;
+            }
         }
     </style>
 
@@ -38,11 +312,11 @@
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
                 <tr style="padding:0px">
-                    <td style="padding:2.5%;width:63%;vertical-align:middle">
+                    <td style="padding:2.5%;width:62%;vertical-align:middle">
                         <p align="center" id="namechange">
                             <name>Akshita Gupta</name>
                         </p>
-                        <p style="text-align:justify; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;">
+                        <p style="text-align:left; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;">
                             I am an ELLIS PhD student at <span style="color:#C50000;">TU Darmstadt</span>, co-supervised
                             by <a href="https://rohrbach.vision/" style="text-decoration: none; color: #0071C5; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;"><b>Prof. Marcus Rohrbach</b></a> and
                             <a href="https://federicotombari.github.io/" style="text-decoration: none; color: #0071C5; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;"><b>Dr. Federico Tombari</b></a> at
@@ -52,7 +326,7 @@
                             During that time, I was also a student researcher at the
                             <a href="https://vectorinstitute.ai/" style="text-decoration: none; color: #C50000; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;">Vector Institute</a>.
                         </p>
-                        <p style="text-align:justify; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;">
+                        <p style="text-align:left; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;">
                             I was fortunate to spend time as a research intern at
                             <span style="color:#C50000;">Apple</span> under
                             <a href="https://scholar.google.com/citations?user=x7Z3ysQAAAAJ&hl=ru" style="text-decoration: none; color:#0071C5; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;"><b>Dr. Tatiana Likhomanenko</b></a>,
@@ -64,7 +338,7 @@
                             and as a scientist in residence at
                             <span style="color:#C50000;">NextAI</span> with <a href="https://www.gwtaylor.ca/" style="text-decoration: none; color: #0071C5; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;"><b>Prof. Graham Taylor</b></a>.
                         </p>
-                        <p style="text-align:justify; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;">
+                        <p style="text-align:left; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;">
                             Before academia, I worked as a Data Scientist at
                             <a href="https://space42.ai/en" style="text-decoration: none; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;">
                                 <span style="color:#C50000;">Bayanat</span>
@@ -78,75 +352,49 @@
                             <a href="https://sites.google.com/view/fahadkhans/home" style="text-decoration: none; color: #0071C5; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;"><b>Dr. Fahad Shahbaz Khan</b></a>.
                         </p>
                         <p style="text-align:center; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;">
-                            <a href="mailto:akshita.sem.iitr@gmail.com" style="text-decoration: none; color: #0071C5; font-weight: bold;">Email</a> &nbsp;/&nbsp;
-                            <a href="https://scholar.google.com/citations?user=G01YeI0AAAAJ&hl=en" style="text-decoration: none; color: #0071C5; font-weight: bold;">Google Scholar</a> &nbsp;/&nbsp;
-                            <a href="https://twitter.com/akshitac8" style="text-decoration: none; color: #0071C5; font-weight: bold;">Twitter</a> &nbsp;/&nbsp;
-                            <a href="https://github.com/akshitac8" style="text-decoration: none; color: #0071C5; font-weight: bold;">Github</a> &nbsp;/&nbsp;
-                            <a href="https://akshitac8.github.io/Gupta_Akshita_resume-12.pdf" style="text-decoration: none; color: #0071C5; font-weight: bold;">Resume/CV</a>
+                            <a href="mailto:akshita.sem.iitr@gmail.com" style="text-decoration: none; color: #0071C5; font-weight: bold; font-size:16px;">Email</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://scholar.google.com/citations?user=G01YeI0AAAAJ&hl=en" style="text-decoration: none; color: #0071C5; font-weight: bold; font-size:16px;">Google Scholar</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://twitter.com/akshitac8" style="text-decoration: none; color: #0071C5; font-weight: bold; font-size:16px;">Twitter</a>
                         </p>
 
                         <p style="margin-top:10px; color:#e74c3c; font-weight:500; white-space:nowrap;">
                           I'm always open to collaborations or project supervisions! Just drop me a message :)
                         </p>
                     </td>
-                    <td style="padding:2.5%;width:40%;max-width:40%">
-                        <a href="images/profile_aks.png"><img alt="profile photo" class="hoverZoomLink"
-                                                              id="myimg" src="images/profile_aks.png"></a>
+                    <td style="padding:2.5% 2.5% 2.5% 0;width:33%;max-width:33%;vertical-align:middle">
+                        <a href="images/update_profile.JPG"><img alt="profile photo" class="hoverZoomLink"
+                                                              id="myimg" src="images/update_profile.JPG"></a>
+                        <p class="coffee-caption">
+                            <a href="mailto:akshita.sem.iitr@gmail.com?subject=Best%20coffee%20recommendations%21"><span class="cup">☕</span> ask me for world's best coffee list</a>
+                        </p>
                     </td>
                 </tr>
                 </tbody>
             </table>
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; justify-items: center; align-items: center; margin-top: 30px; margin-bottom: 30px;">
-                <div style="text-align: center;">
-                    <img src="logos/darmstadt.png" style="height: 100px;">
-                    <div style="font-weight: bold;">TU Darmstadt<br>2025-Present</div>
-                </div>
-
-                <div style="text-align: center;">
-                    <img src="logos/apple.jpeg" style="height: 100px;">
-                    <div style="font-weight: bold;">Apple<br>2024-2025</div>
-                </div>
-
-                <div style="text-align: center;">
-                    <img src="logos/uog.png" style="height: 100px;">
-                    <div style="font-weight: bold;">University of Guelph<br>2022-2024</div>
-                </div>
-
-                <div style="text-align: center;">
-                    <img src="logos/vector.png" style="height: 100px;">
-                    <div style="font-weight: bold;">Vector Institute<br>2022-2024</div>
-                </div>
-
-                <div style="text-align: center;">
-                    <img src="logos/microsoft.png" style="height: 100px;">
-                    <div style="font-weight: bold;">Microsoft Research<br>2023-2024</div>
-                </div>
-
-                <div style="text-align: center;">
-                    <img src="logos/nextAI.jpeg" style="height: 100px;">
-                    <div style="font-weight: bold;">NextAI<br>2024</div>
-                </div>
-
-                <div style="text-align: center;">
-                    <img src="logos/bayanat.jpeg" style="height: 100px;">
-                    <div style="font-weight: bold;">Bayanat for Mapping & Surveying<br>2022</div>
-                </div>
-
-                <div style="text-align: center;">
-                    <img src="logos/iiai_logo.png" style="height: 100px;">
-                    <div style="font-weight: bold;">Inception Institute of Artificial Intelligence<br>2018-2022</div>
-                </div>
+            <div class="logo-strip" aria-label="Affiliations">
+                <div class="logo-tile"><span class="logo-mark"><img src="logos/darmstadt.png" alt="TU Darmstadt"></span><span class="logo-date">2025-Present</span></div>
+                <div class="logo-tile"><span class="logo-mark"><img src="logos/google.png" alt="Google"></span><span class="logo-date">2026</span></div>
+                <div class="logo-tile"><span class="logo-mark"><img src="logos/apple.jpeg" alt="Apple"></span><span class="logo-date">2024-2025</span></div>
+                <div class="logo-tile"><span class="logo-mark"><img src="logos/uog.png" alt="University of Guelph"></span><span class="logo-date">2022-2024</span></div>
+                <div class="logo-tile"><span class="logo-mark"><img src="logos/vector.png" alt="Vector Institute"></span><span class="logo-date">2022-2024</span></div>
+                <div class="logo-break"></div>
+                <div class="logo-tile"><span class="logo-mark"><img src="logos/microsoft.png" alt="Microsoft Research"></span><span class="logo-date">2023-2024</span></div>
+                <div class="logo-tile"><span class="logo-mark"><img src="logos/nextAI.jpeg" alt="NextAI"></span><span class="logo-date">2024</span></div>
+                <div class="logo-tile"><span class="logo-mark"><img src="logos/bayanat.jpeg" alt="Bayanat"></span><span class="logo-date">2022</span></div>
+                <div class="logo-tile"><span class="logo-mark"><img src="logos/iiai_logo.png" alt="Inception Institute of Artificial Intelligence"></span><span class="logo-date">2018-2022</span></div>
             </div>
             <h2 style="text-align:left; margin-left: 10px;">What's New ✨</h2>
             <div class="news-container">
-                <table style="width:100%; border:0px; border-spacing:4px; border-collapse:separate; margin-right:auto; margin-left:auto; font-family: calibri, sans-serif; font-size:16px; line-height:1.7;">
+                <table style="width:100%; border:0px; border-spacing:4px 14px; border-collapse:separate; margin-right:auto; margin-left:auto; font-family: calibri, sans-serif; font-size:16px; line-height:1.6;">
                     <tbody>
+
+                    <tr><td><strong>[Jun 2026]</strong></td><td>🚀 Started as a Student Researcher at <strong>Google Zurich</strong> with Dr. Yongqian Xian and Dr. Federico Tombari.</td></tr>
+
+                    <tr><td><strong>[May 2026]</strong></td><td>🌟 Co-organizing <strong>WICV at ECCV 2026</strong> as lead organizer.</td></tr>
 
                     <tr><td><strong>[Mar 2025]</strong></td><td>🎓 Excited to be an ELLIS PhD student at <strong>TU Darmstadt</strong> under Prof. Marcus Rohrbach and Dr. Federico Tombari (Google Zurich) 🎉</td></tr>
 
                     <tr><td><strong>[Oct 2024]</strong></td><td>🎓 Graduated and Defended my <a href="https://atrium.lib.uoguelph.ca/items/67a35868-ca5a-494f-9116-62ea1c57b733" style="text-decoration:none; color:#0071C5; font-weight:bold;">Masters Thesis</a></td></tr>
-
-                    <tr><td><strong>[Nov 2024]</strong></td><td>📝 Our paper <a href="https://arxiv.org/pdf/2411.17690" style="text-decoration:none; color:#0071C5; font-weight:bold;">Visatronic: A Multimodal Decoder-Only Model for Speech Synthesis</a> is now on <strong>ArXiv</strong>!</td></tr>
 
                     <tr><td><strong>[Jun 2024]</strong></td><td>🍏 Joined <strong>Apple</strong> as a Research Intern!</td></tr>
 
@@ -186,37 +434,112 @@
                 </table>
             </div>
 
-            <!-- Reviewing Section -->
-            <h2 style="text-align:left; margin-left: 10px;">Conference and Journal Reviewing 📚</h2>
-            <p style="font-family: calibri, sans-serif; font-size:16px; line-height:1.7; margin-left:10px;">
-                <strong>CVPR</strong> (2022–2025) &nbsp;&nbsp;|&nbsp;&nbsp;
-                <strong>ECCV</strong> (2022, 2024) &nbsp;&nbsp;|&nbsp;&nbsp;
-                <strong>ICCV</strong> (2021) &nbsp;&nbsp;|&nbsp;&nbsp;
-                <strong>TPAMI</strong> (Journal)
-            </p>
-
-            <!-- Invited Talks Section -->
-            <h2 style="text-align:left; margin-left: 10px;">Invited Talks 🎤</h2>
-            <ul style="font-family: calibri, sans-serif; font-size:16px; line-height:1.7; margin-left:10px;">
-                <li><strong>[Mar 2025]</strong> — Gave a talk at UCF CRCV lab — thank you Prof. Shah for hosting me!</li>
-                <li><strong>[Dec 2021]</strong> — Computer Vision Talks (<a href="https://youtu.be/0MZxWozdRiM" target="_blank" style="text-decoration: none; color: #0071C5; font-weight: bold;">YouTube Link</a>)</li>
-            </ul>
-            <!-- Research Interests Section -->
-            <h2 style="text-align:left; margin-left: 10px;">Research Interests 🔍 </h2>
-            <p style="text-align:justify; margin-left: 10px; margin-right: 10px;">
-                I am broadly interested in building scalable, multimodal models that combine vision, language, and speech modalities with interests in efficient modeling, temporal understanding, and open-world generalization.
-            </p>
-
             <h2 style="text-align:left; margin-left: 10px;">Publications  📄 </h2>
+            <h3 class="pub-year">2026</h3>
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
                 <tbody>
                 <tr>
-                <td style="padding:20px; width:30%; text-align:center; vertical-align:middle;">
-                    <img src="images/visatronic.png" style="max-width:100%; height:auto;">
+                <td class="publication-image-cell">
+                    <div class="paper-placeholder">GETR</div>
                 </td>
-                <td style="padding:20px; width:70%; vertical-align:middle;">
+                <td class="publication-note">
+                    <div class="paper-title">GETR: Guided Exploration Trajectories for Long-Video Reasoning</div>
+                    <strong>Akshita Gupta</strong>,
+                    <a href="https://adityac8.github.io/" style="text-decoration:none; color:#0071C5;">Aditya Arora</a>,
+                    Hector Garcia Rodriguez,
+                    <a href="https://federicotombari.github.io/" style="text-decoration:none; color:#0071C5;">Federico Tombari</a>,
+                    Anna Rohrbach,
+                    <a href="https://rohrbach.vision/" style="text-decoration:none; color:#0071C5;">Marcus Rohrbach</a><br>
+                    <span class="venue-tag review">Under Review</span>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
+                <tbody>
+                <tr>
+                <td class="publication-image-cell">
+                    <div class="paper-placeholder">Audio<br>Description</div>
+                </td>
+                <td class="publication-note">
+                    <div class="paper-title">From Visual Cues to Spoken Narration: Rethinking Audio Description</div>
+                    <strong>Akshita Gupta</strong>,
+                    <a href="https://adityac8.github.io/" style="text-decoration:none; color:#0071C5;">Aditya Arora</a>,
+                    <a href="https://federicotombari.github.io/" style="text-decoration:none; color:#0071C5;">Federico Tombari</a>,
+                    <a href="https://rohrbach.vision/" style="text-decoration:none; color:#0071C5;">Marcus Rohrbach</a>,
+                    Anna Rohrbach<br>
+                    <span class="venue-tag review">Under Review</span>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
+                <tbody>
+                <tr>
+                <td class="publication-image-cell">
+                    <img src="images/recap.png" alt="ReCap paper preview">
+                </td>
+                <td class="publication-note">
+                    <div class="paper-title">ReCap: Lightweight Referential Grounding for Coherent Story Visualization</div>
+                    <a href="https://adityac8.github.io/" style="text-decoration:none; color:#0071C5;">Aditya Arora</a>,
+                    <strong>Akshita Gupta</strong>,
+                    Pau Rodriguez,
+                    <a href="https://rohrbach.vision/" style="text-decoration:none; color:#0071C5;">Marcus Rohrbach</a><br>
+                    <span class="venue-tag review">Under Review</span>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
+                <tbody>
+                <tr>
+                <td class="publication-image-cell">
+                    <img src="images/halloprobe.png" alt="HaloProbe paper preview">
+                </td>
+                <td class="publication-note">
+                    <div class="paper-title">HaloProbe: Bayesian Detection and Mitigation of Object Hallucinations in Vision-Language Models</div>
+                    Reihaneh Zohrabi,
+                    Hosein Hasani,
+                    <strong>Akshita Gupta</strong>,
+                    Mahdieh Soleymani Baghshah,
+                    Anna Rohrbach,
+                    <a href="https://rohrbach.vision/" style="text-decoration:none; color:#0071C5;">Marcus Rohrbach</a><br>
+                    <span class="venue-tag">ICML 2026</span>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
+                <tbody>
+                <tr>
+                <td class="publication-image-cell">
+                    <img src="images/multimodal_dataset.png" alt="Multi-modal insect biodiversity dataset preview">
+                </td>
+                <td class="publication-note">
+                    <div class="paper-title">A Multi-Modal Dataset for Insect Biodiversity with Imagery and DNA at the Trap and Individual Level</div>
+                    John Quinto,
+                    Johanna Orsholm,
+                    Brendan Furneaux,
+                    Tommi Mononen,
+                    Tomas Roslin,
+                    Iuliia Zarubiieva,
+                    <strong>Akshita Gupta</strong>,
+                    Scott C. Lowe,
+                    <a href="https://www.gwtaylor.ca/" style="text-decoration:none; color:#0071C5;">Graham W. Taylor</a><br>
+                    <span class="venue-tag">Nature Scientific Data 2026</span> <span class="venue-tag">NeurIPS 2025 Workshop on Imageomics</span> <span class="venue-tag oral">ORAL</span>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
+                <tbody>
+                <tr>
+                <td class="publication-image-cell">
+                    <img src="images/visatronic.png" alt="Video-text-to-speech synthesis preview">
+                </td>
+                <td class="publication-note">
                     <a href="https://arxiv.org/pdf/2411.17690" style="text-decoration:none; color:black;">
-                        <div style="font-size:16px; font-weight:bold; line-height:1.4;">Visatronic: A Multimodal Decoder-Only Model for Speech Synthesis</div>
+                        <div class="paper-title">Mechanisms of Multimodal Synchronization: Insights from Decoder-Based Video-Text-to-Speech Synthesis</div>
                     </a>
                     <div>
                         <strong>Akshita Gupta</strong>,
@@ -226,20 +549,61 @@
                         <a href="https://scholar.google.com/citations?user=1AHzh04AAAAJ&hl=en" style="text-decoration:none; color:#0071C5;">Zakaria Aldeneh</a>,
                         <a href="https://scholar.google.com/citations?user=kjMNMLkAAAAJ&hl=en" style="text-decoration:none; color:#0071C5;">Navdeep Jaitly</a>
                     </div>
-                    <strong>ArXiv 2025</strong> |
-                    <a href="https://arxiv.org/pdf/2411.17690" style="text-decoration:none; color:#0071C5; font-weight:bold;">Paper</a>
+                    <span class="venue-tag review">Under Review</span>
+                    <a href="https://arxiv.org/pdf/2411.17690" class="link-badge">Paper</a>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+            <h3 class="pub-year">2025</h3>
+            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
+                <tbody>
+                <tr>
+                <td class="publication-image-cell">
+                    <img src="images/bugsr.png" alt="BugSR paper preview">
+                </td>
+                <td class="publication-note">
+                    <div class="paper-title">BugSR: Improving Tiny Instance Segmentation on the MassID45 Dataset</div>
+                    John Quinto,
+                    Scott C. Lowe,
+                    <strong>Akshita Gupta</strong>,
+                    Johanna Orsholm,
+                    Prajakta Darade,
+                    Iuliia Zarubiieva,
+                    Brendan Furneaux,
+                    Tommi Mononen,
+                    Tomas Roslin,
+                    <a href="https://www.gwtaylor.ca/" style="text-decoration:none; color:#0071C5;">Graham W. Taylor</a><br>
+                    <span class="venue-tag">NeurIPS 2025 Workshop on Imageomics</span>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
+                <tbody>
+                <tr>
+                <td class="publication-image-cell">
+                    <img src="images/aim_challenge.png" alt="AIM Challenge report preview">
+                </td>
+                <td class="publication-note">
+                    <div class="paper-title">RestormerL - Efficient Real-World Deblurring using Single Images: AIM 2025 Challenge Report</div>
+                    <a href="https://adityac8.github.io/" style="text-decoration:none; color:#0071C5;">Aditya Arora</a>,
+                    <strong>Akshita Gupta</strong>,
+                    Anna Rohrbach,
+                    <a href="https://rohrbach.vision/" style="text-decoration:none; color:#0071C5;">Marcus Rohrbach</a><br>
+                    <span class="venue-tag">AIM 2025 Challenge Report</span> <span class="venue-tag oral">Runner-up Challenge Award</span>
                 </td>
                 </tr>
                 </tbody>
             </table>
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto;margin-left:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
                 <tbody><tr>
-                <td style="padding:20px; width:30%; text-align:center; vertical-align:middle;">
+                <td class="publication-image-cell">
                     <img src="images/losa.png" style="max-width:100%; height:auto;">
                 </td>
-                <td style="padding:20px; width:70%; vertical-align:middle;">
+                <td class="publication-note">
                     <a href="https://arxiv.org/pdf/2404.01282" style="text-decoration:none; color:black;">
-                        <div style="font-size:16px; font-weight:bold; line-height:1.4;">LoSA: Long-Short-range Adapter for Scaling End-to-End Temporal Action Localization</div>
+                        <div class="paper-title">LoSA: Long-Short-range Adapter for Scaling End-to-End Temporal Action Localization</div>
                     </a>
                     <strong>Akshita Gupta<sup>*</sup></strong>,
                     <a href="https://g1910.github.io/" style="text-decoration:none; color:#0071C5;">Gaurav Mittal<sup>*</sup></a>,
@@ -247,20 +611,21 @@
                     <a href="#" style="text-decoration:none; color:#0071C5;">Ye Yu</a>,
                     <a href="https://www.gwtaylor.ca/" style="text-decoration:none; color:#0071C5;">Graham W. Taylor</a>,
                     <a href="https://www.microsoft.com/en-us/research/people/meic/" style="text-decoration:none; color:#0071C5;">Mei Chen</a><br>
-                    <strong>WACV 2025</strong> <span style="color:red;">(Oral)</span> |
-                    <a href="https://arxiv.org/abs/2404.01282" style="text-decoration:none; color:#0071C5; font-weight:bold;">Arxiv</a>
-<!--                <a href="https://github.com/akshitac8/tfvaegan" style="text-decoration:none; color:#0071C5; font-weight:bold;">Code</a>-->
+                    <span class="venue-tag">WACV 2025</span> <span class="venue-tag oral">ORAL</span>
+                    <a href="https://arxiv.org/abs/2404.01282" class="link-badge">Arxiv</a>
+<!--                <a href="https://github.com/akshitac8/tfvaegan" class="link-badge">Code</a>-->
                 </td>
                 </tr></tbody>
             </table>
+            <h3 class="pub-year">2024</h3>
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto;margin-left:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
                 <tbody><tr>
-                <td style="padding:20px; width:30%; text-align:center; vertical-align:middle;">
+                <td class="publication-image-cell">
                     <img src="images/ovformer.png" style="max-width:100%; height:auto;">
                 </td>
-                <td style="padding:20px; width:70%; vertical-align:middle;">
+                <td class="publication-note">
                     <a href="https://arxiv.org/pdf/2406.15556" style="text-decoration:none; color:black;">
-                        <div style="font-size:16px; font-weight:bold; line-height:1.4;">Open-Vocabulary Temporal Action Localization using Multimodal Guidance</div>
+                        <div class="paper-title">Open-Vocabulary Temporal Action Localization using Multimodal Guidance</div>
                     </a>
                     <strong>Akshita Gupta</strong>,
                     <a href="https://adityac8.github.io/" style="text-decoration:none; color:#0071C5;">Aditya Arora</a>,
@@ -268,21 +633,22 @@
                     <a href="https://salman-h-khan.github.io/" style="text-decoration:none; color:#0071C5;">Salman Khan</a>,
                     <a href="https://sites.google.com/view/fahadkhans/home" style="text-decoration:none; color:#0071C5;">Fahad Shahbaz Khan</a>,
                     <a href="https://www.gwtaylor.ca/" style="text-decoration:none; color:#0071C5;">Graham W. Taylor</a><br>
-                    <strong>BMVC 2024</strong> |
-                    <a href="https://arxiv.org/pdf/2406.15556" style="text-decoration:none; color:#0071C5; font-weight:bold;">Paper</a>
+                    <span class="venue-tag">BMVC 2024</span>
+                    <a href="https://arxiv.org/pdf/2406.15556" class="link-badge">Paper</a>
 <!--                    /-->
-<!--                    <a href="https://github.com/akshitac8/tfvaegan" style="text-decoration:none; color:#0071C5; font-weight:bold;">Code</a>-->
+<!--                    <a href="https://github.com/akshitac8/tfvaegan" class="link-badge">Code</a>-->
                 </td>
                 </tr></tbody>
             </table>
+            <h3 class="pub-year">2023</h3>
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
                 <tbody><tr>
-                <td style="padding:20px; width:30%; text-align:center; vertical-align:middle;">
+                <td class="publication-image-cell">
                     <img src="images/gam_mlzsl.png" style="max-width:100%; height:auto;">
                 </td>
-                <td style="padding:20px; width:70%; vertical-align:middle;">
+                <td class="publication-note">
                     <a href="https://arxiv.org/pdf/2101.11606" style="text-decoration:none; color:black;">
-                        <div style="font-size:16px; font-weight:bold; line-height:1.4;">Generative Multi-Label Zero-Shot Learning</div>
+                        <div class="paper-title">Generative Multi-Label Zero-Shot Learning</div>
                     </a>
                     <strong>Akshita Gupta<sup>*</sup></strong>,
                     <a href="https://sites.google.com/view/sanath-narayan" style="text-decoration:none; color:#0071C5;">Sanath Narayan<sup>*</sup></a>,
@@ -290,24 +656,25 @@
                     <a href="https://sites.google.com/view/fahadkhans/home" style="text-decoration:none; color:#0071C5;">Fahad Shahbaz Khan</a>,
                     <a href="https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=en" style="text-decoration:none; color:#0071C5;">Ling Shao</a>,
                     <a href="http://www.cvc.uab.es/LAMP/joost/" style="text-decoration:none; color:#0071C5;">Joost van de Weijer</a><br>
-                    <strong>TPAMI 2023</strong> |
-                    <a href="https://arxiv.org/pdf/2101.11606" style="text-decoration:none; color:#0071C5; font-weight:bold;">Paper</a>
+                    <span class="venue-tag">TPAMI 2023</span>
+                    <a href="https://arxiv.org/pdf/2101.11606" class="link-badge">Paper</a>
 <!--                    /-->
-<!--                    <a href="https://github.com/akshitac8/tfvaegan" style="text-decoration:none; color:#0071C5; font-weight:bold;">Code</a>-->
+<!--                    <a href="https://github.com/akshitac8/tfvaegan" class="link-badge">Code</a>-->
 <!--                    <ul>-->
 <!--                        <li><u>Description:</u> Proposed a generative feature synthesizing framework for multi-label zero-shot learning tasks.</li>-->
 <!--                    </ul>-->
                 </td>
                 </tr></tbody>
             </table>
+            <h3 class="pub-year">2022</h3>
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
                 <tbody><tr>
-                <td style="padding:20px; width:30%; text-align:center; vertical-align:middle;">
+                <td class="publication-image-cell">
                     <img src="images/OWDETR_intro.png" style="max-width:100%; height:auto;">
                 </td>
-                <td style="padding:20px; width:70%; vertical-align:middle;">
+                <td class="publication-note">
                     <a href="https://akshitac8.github.io/OWDETR" style="text-decoration:none; color:black;">
-                        <div style="font-size:16px; font-weight:bold; line-height:1.4;">OW-DETR: Open-world Detection Transformer</div>
+                        <div class="paper-title">OW-DETR: Open-world Detection Transformer</div>
                     </a>
                     <strong>Akshita Gupta<sup>*</sup></strong>,
                     <a href="https://sites.google.com/view/sanath-narayan">Sanath Narayan<sup>*</sup></a>,
@@ -315,24 +682,24 @@
                     <a href="https://salman-h-khan.github.io/">Salman Khan</a>,
                     <a href="https://sites.google.com/view/fahadkhans/home">Fahad Shahbaz Khan</a>,
                     <a href="https://www.crcv.ucf.edu/person/mubarak-shah/">Mubarak Shah</a><br>
-                    <strong>CVPR 2022</strong><br>
-                    <a href="https://arxiv.org/pdf/2112.01513.pdf" style="text-decoration:none; color:#0071C5; font-weight:bold;">Paper</a>
-                    /
-                    <a href="https://github.com/akshitac8/OW-DETR" style="text-decoration:none; color:#0071C5; font-weight:bold;">Code</a>
+                    <span class="venue-tag">CVPR 2022</span><br>
+                    <a href="https://arxiv.org/pdf/2112.01513.pdf" class="link-badge">Paper</a>
+                    <a href="https://github.com/akshitac8/OW-DETR" class="link-badge">Code</a>
 <!--                    <ul>-->
 <!--                        <li><u>Description:</u> Proposed an open-world detection transformer with multi-scale pseudo-labeling and context-driven training.</li>-->
 <!--                    </ul>-->
                 </td>
                 </tr></tbody>
             </table>
+            <h3 class="pub-year">2021</h3>
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
                 <tbody><tr>
-                <td style="padding:20px; width:30%; text-align:center; vertical-align:middle;">
+                <td class="publication-image-cell">
                     <img src="images/image834.png" style="max-width:100%; height:auto;">
                 </td>
-                <td style="padding:20px; width:70%; vertical-align:middle;">
+                <td class="publication-note">
                     <a href="https://akshitac8.github.io/BiAM" style="text-decoration:none; color:black;">
-                        <div style="font-size:16px; font-weight:bold; line-height:1.4;">Discriminative Region-based Multi-Label Zero-Shot Learning</div>
+                        <div class="paper-title">Discriminative Region-based Multi-Label Zero-Shot Learning</div>
                     </a>
                     <a href="https://sites.google.com/view/sanath-narayan">Sanath Narayan<sup>*</sup></a>,
                     <strong>Akshita Gupta<sup>*</sup></strong>,
@@ -340,24 +707,24 @@
                     <a href="https://sites.google.com/view/fahadkhans/home">Fahad Shahbaz Khan</a>,
                     <a href="https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=en">Ling Shao</a>,
                     <a href="https://www.crcv.ucf.edu/person/mubarak-shah/">Mubarak Shah</a><br>
-                    <strong>ICCV 2021</strong><br>
-                    <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Narayan_Discriminative_Region-Based_Multi-Label_Zero-Shot_Learning_ICCV_2021_paper.pdf" style="text-decoration:none; color:#0071C5; font-weight:bold;">Paper</a>
-                    /
-                    <a href="https://github.com/akshitac8/BiAM" style="text-decoration:none; color:#0071C5; font-weight:bold;">Code</a>
+                    <span class="venue-tag">ICCV 2021</span><br>
+                    <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Narayan_Discriminative_Region-Based_Multi-Label_Zero-Shot_Learning_ICCV_2021_paper.pdf" class="link-badge">Paper</a>
+                    <a href="https://github.com/akshitac8/BiAM" class="link-badge">Code</a>
 <!--                    <ul>-->
 <!--                        <li><u>Description:</u> Proposed a region-based attention module for multi-label zero-shot learning.</li>-->
 <!--                    </ul>-->
                 </td>
                 </tr></tbody>
             </table>
+            <h3 class="pub-year">2020</h3>
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
                 <tbody><tr>
-                <td style="padding:20px; width:30%; text-align:center; vertical-align:middle;">
+                <td class="publication-image-cell">
                     <img src="images/feedback_vis.png" style="max-width:100%; height:auto;">
                 </td>
-                <td style="padding:20px; width:70%; vertical-align:middle;">
+                <td class="publication-note">
                     <a href="https://akshitac8.github.io/tfvaegan/" style="text-decoration:none; color:black;">
-                        <div style="font-size:16px; font-weight:bold; line-height:1.4;">Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification</div>
+                        <div class="paper-title">Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification</div>
                     </a>
                     <a href="https://sites.google.com/view/sanath-narayan">Sanath Narayan<sup>*</sup></a>,
                     <strong>Akshita Gupta<sup>*</sup></strong>,
@@ -365,24 +732,24 @@
                     <a href="https://sites.google.com/view/fahadkhans/home">Fahad Shahbaz Khan</a>,
                     <a href="https://www.ceessnoek.info/">Cees G. M. Snoek</a>,
                     <a href="https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=en">Ling Shao</a><br>
-                    <strong>ECCV 2020</strong><br>
-                    <a href="https://arxiv.org/abs/2003.07833" style="text-decoration:none; color:#0071C5; font-weight:bold;">Paper</a>
-                    /
-                    <a href="https://github.com/akshitac8/tfvaegan" style="text-decoration:none; color:#0071C5; font-weight:bold;">Code</a>
+                    <span class="venue-tag">ECCV 2020</span><br>
+                    <a href="https://arxiv.org/abs/2003.07833" class="link-badge">Paper</a>
+                    <a href="https://github.com/akshitac8/tfvaegan" class="link-badge">Code</a>
 <!--                    <ul>-->
 <!--                        <li><u>Description:</u> Proposed a feedback-based generative model to synthesize more discriminative features for zero-shot learning.</li>-->
 <!--                    </ul>-->
                 </td>
                 </tr></tbody>
             </table>
+            <h3 class="pub-year">2019</h3>
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
                 <tbody><tr>
-                <td style="padding:20px; width:30%; text-align:center; vertical-align:middle;">
+                <td class="publication-image-cell">
                     <img src="images/isaid.png" style="max-width:100%; height:auto;">
                 </td>
-                <td style="padding:20px; width:70%; vertical-align:middle;">
+                <td class="publication-note">
                     <a href="https://captain-whu.github.io/iSAID/" style="text-decoration:none; color:black;">
-                        <div style="font-size:16px; font-weight:bold; line-height:1.4;">iSAID: A Large-scale Dataset for Instance Segmentation in Aerial Images</div>
+                        <div class="paper-title">iSAID: A Large-scale Dataset for Instance Segmentation in Aerial Images</div>
                     </a>
                     <a href="https://scholar.google.es/citations?user=WNGPkVQAAAAJ&hl=en">Syed Waqas Zamir</a>,
                     <a href="https://adityac8.github.io/">Aditya Arora</a>,
@@ -394,31 +761,31 @@
                     <a href="https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=en">Ling Shao</a>,
                     <a href="http://www.captain-whu.com/xia_En.html">Gui-Song Xia</a>,
                     <a href="https://scholar.google.com/citations?user=UeltiQ4AAAAJ&hl=en">Xiang Bai</a><br>
-                    <strong>CVPR Workshop 2019 </strong><span style="color:red;">(Oral)</span> <br>
-                    <a href="https://github.com/CAPTAIN-WHU/iSAID_Devkit" style="text-decoration:none; color:#0071C5; font-weight:bold;">Code</a>
-                    /
-                    <a href="https://captain-whu.github.io/iSAID/index.html" style="text-decoration:none; color:#0071C5; font-weight:bold;">Dataset</a>
+                    <span class="venue-tag">CVPR Workshop 2019</span> <span class="venue-tag oral">ORAL</span> <br>
+                    <a href="https://github.com/CAPTAIN-WHU/iSAID_Devkit" class="link-badge">Code</a>
+                    <a href="https://captain-whu.github.io/iSAID/index.html" class="link-badge">Dataset</a>
 <!--                    <ul>-->
 <!--                        <li><u>Description:</u> Introduced a large-scale benchmark for instance segmentation and object detection in aerial imagery.</li>-->
 <!--                    </ul>-->
                 </td>
                 </tr></tbody>
             </table>
+            <h3 class="pub-year">2018</h3>
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
                 <tbody><tr>
-                <td style="padding:20px; width:30%; text-align:center; vertical-align:middle;">
+                <td class="publication-image-cell">
                     <img src="images/interspeech.png" style="max-width:100%; height:auto;">
                 </td>
-                <td style="padding:20px; width:70%; vertical-align:middle;">
+                <td class="publication-note">
                     <a href="https://arxiv.org/abs/1811.00936" style="text-decoration:none; color:black;">
-                        <div style="font-size:16px; font-weight:bold; line-height:1.4;">Acoustic Features Fusion Using Attentive Multi-Channel Deep Architecture</div>
+                        <div class="paper-title">Acoustic Features Fusion Using Attentive Multi-Channel Deep Architecture</div>
                     </a>
                     <a href="http://deeplearn-ai.com/about-3/?i=1">Gaurav Bhatt</a>,
                     <strong>Akshita Gupta</strong>,
                     <a href="https://adityac8.github.io/">Aditya Arora</a>,
                     <a href="http://bala.cs.faculty.iitr.ac.in/">Balasubramanian Raman</a><br>
-                    <strong>Interspeech Workshop 2018</strong> |
-                    <a href="https://github.com/DeepLearn-lab/Acoustic-Feature-Fusion_Chime18" style="text-decoration:none; color:#0071C5; font-weight:bold;">Code</a>
+                    <span class="venue-tag">Interspeech Workshop 2018</span>
+                    <a href="https://github.com/DeepLearn-lab/Acoustic-Feature-Fusion_Chime18" class="link-badge">Code</a>
 <!--                    <ul>-->
 <!--                        <li><u>Description:</u> Proposed an attention-based deep model for fusing multi-channel acoustic features for audio scene recognition and tagging.</li>-->
 <!--                    </ul>-->
