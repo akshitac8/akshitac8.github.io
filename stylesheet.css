@@ -145,12 +145,14 @@ p#namechange:hover span#b {
 
 .news-container {
   max-width: 100%;
-  width: 800px;
+  width: 840px;
   max-height: 340px;
   overflow-y: auto;
   overflow-x: hidden;
-  border: 1px solid #e0e0e0;
-  padding: 16px 18px;
-  background-color: #fafafa;
-  margin: 0 auto 28px;
+  border: 1px solid #e4eaf1;
+  border-radius: 6px;
+  padding: 20px 26px;
+  background-color: #fbfcfe;
+  box-sizing: border-box;
+  margin: 0 auto 38px;
 }
