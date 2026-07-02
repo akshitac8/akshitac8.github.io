@@ -82,17 +82,18 @@
             height: 0;
         }
         .publication-note {
-            padding: 16px 20px;
-            width: 70%;
+            padding: 22px 18px 26px 22px;
+            width: 66%;
             vertical-align: middle;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.55;
         }
         .publication-note .paper-title {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 700;
             line-height: 1.35;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
+            color: #111;
         }
         /* author names are <a>/<strong>, which stylesheet.css forces to 14px — restore them */
         .publication-note a:not(.link-badge),
@@ -100,21 +101,23 @@
             font-size: 16px;
         }
         .publication-image-cell {
-            padding: 18px 20px;
-            width: 30%;
+            padding: 22px 20px 26px 4px;
+            width: 34%;
             text-align: center;
             vertical-align: middle;
         }
         .publication-image-cell img {
+            width: 220px;
             max-width: 100%;
-            max-height: 130px;
+            max-height: 165px;
             height: auto;
             object-fit: contain;
+            border-radius: 6px;
         }
         .paper-placeholder {
             aspect-ratio: 4 / 3;
             width: 100%;
-            max-width: 165px;
+            max-width: 215px;
             margin: 0 auto;
             display: grid;
             place-items: center;
@@ -123,7 +126,7 @@
             border-radius: 10px;
             background: linear-gradient(135deg, #eef4fb 0%, #e6ecf5 100%);
             color: #0071C5;
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 700;
             letter-spacing: .3px;
             line-height: 1.3;
@@ -136,29 +139,44 @@
             font-size: 16px !important;
         }
         .news-container table {
-            line-height: 1.6 !important;
+            border-spacing: 0 12px !important;
+            line-height: 1.5 !important;
         }
         .news-container td:first-child {
-            width: 88px;
+            width: 104px;
+            padding-right: 14px;
             white-space: nowrap;
             vertical-align: top;
+            color: #000;
+        }
+        .news-container td:first-child strong {
+            color: #000;
+            font-weight: 700;
         }
         .news-container td:last-child {
             vertical-align: top;
+            color: #222;
+        }
+        .news-container td:last-child strong {
+            color: #222;
+            font-weight: 600;
         }
         .pub-year {
-            margin: 22px 0 4px 10px;
-            color: #555;
+            margin: 36px 0 10px 10px;
+            padding-top: 8px;
+            border-top: 1px solid #edf1f5;
+            color: #6f7780;
             font-family: calibri, sans-serif;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 15px;
+            font-weight: 700;
             line-height: 1.4;
+            letter-spacing: .03em;
         }
         .pub-year + table {
             margin-top: 0 !important;
         }
         .pub-year ~ table {
-            margin-bottom: 16px !important;
+            margin-bottom: 8px !important;
         }
         html {
             scroll-behavior: smooth;
@@ -300,6 +318,52 @@
             .logo-mark img {
                 max-width: 130px;
             }
+            .publication-image-cell,
+            .publication-note {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .publication-image-cell {
+                padding-bottom: 8px;
+            }
+            .publication-note {
+                padding-top: 8px;
+            }
+            .pub-year ~ table {
+                width: calc(100vw - 24px) !important;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .news-container {
+                width: calc(100vw - 16px);
+                padding: 16px 18px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .news-container table,
+            .news-container tbody,
+            .news-container tr,
+            .news-container td {
+                display: block;
+                width: auto !important;
+            }
+            .news-container td {
+                max-width: calc(100vw - 52px);
+                overflow-wrap: anywhere;
+                white-space: normal;
+            }
+            .news-container tr {
+                margin-bottom: 12px;
+            }
+            .news-container td:first-child {
+                margin-bottom: 2px;
+                padding-right: 10px;
+            }
         }
     </style>
 
@@ -388,17 +452,17 @@
 
                     <tr><td><strong>[May 2026]</strong></td><td>🌟 Co-organizing <strong>WICV at ECCV 2026</strong> as lead organizer.</td></tr>
 
-                    <tr><td><strong>[Mar 2025]</strong></td><td>🎓 Excited to be an ELLIS PhD student at <strong>TU Darmstadt</strong> under Prof. Marcus Rohrbach and Dr. Federico Tombari (Google Zurich) 🎉</td></tr>
+                    <tr><td><strong>[Mar 2025]</strong></td><td>🎓 Excited to be an ELLIS PhD student at <strong>TU Darmstadt</strong> under Prof. Marcus Rohrbach and Dr. Federico Tombari (Google Zurich).</td></tr>
 
-                    <tr><td><strong>[Oct 2024]</strong></td><td>🎓 Graduated and Defended my <a href="https://atrium.lib.uoguelph.ca/items/67a35868-ca5a-494f-9116-62ea1c57b733" style="text-decoration:none; color:#0071C5; font-weight:bold;">Masters Thesis</a></td></tr>
+                    <tr><td><strong>[Oct 2024]</strong></td><td>🎓 Graduated and defended my <a href="https://atrium.lib.uoguelph.ca/items/67a35868-ca5a-494f-9116-62ea1c57b733" style="text-decoration:none; color:#0071C5; font-weight:bold;">Masters Thesis</a>.</td></tr>
 
-                    <tr><td><strong>[Jun 2024]</strong></td><td>🍏 Joined <strong>Apple</strong> as a Research Intern!</td></tr>
+                    <tr><td><strong>[Jun 2024]</strong></td><td>🍏 Joined <strong>Apple</strong> as a Research Intern.</td></tr>
 
                     <tr><td><strong>[May 2024]</strong></td><td>🧠 Serving as a Scientist-in-Residence at <strong>NextAI</strong>.</td></tr>
 
-                    <tr><td><strong>[Jan 2024]</strong></td><td>🏆 Our paper <a href="https://arxiv.org/abs/2404.01282" style="text-decoration:none; color:#0071C5; font-weight:bold;">Long-Short-range Adapter for Scaling End-to-End Temporal Action Localization</a> accepted at <strong>WACV 2025 (<span style="color:red;">Oral</span>)</strong>! 🎤</td></tr>
+                    <tr><td><strong>[Jan 2024]</strong></td><td>🏆 Our paper <a href="https://arxiv.org/abs/2404.01282" style="text-decoration:none; color:#0071C5; font-weight:bold;">Long-Short-range Adapter for Scaling End-to-End Temporal Action Localization</a> accepted at <strong>WACV 2025 (<span style="color:red;">Oral</span>)</strong>.</td></tr>
 
-                    <tr><td><strong>[Dec 2023]</strong></td><td>📚 Our work <a href="https://arxiv.org/pdf/2406.15556" style="text-decoration:none; color:#0071C5; font-weight:bold;">Open-Vocabulary Temporal Action Localization using Multimodal Guidance</a> accepted at <strong>BMVC 2024</strong>!</td></tr>
+                    <tr><td><strong>[Dec 2023]</strong></td><td>📚 Our work <a href="https://arxiv.org/pdf/2406.15556" style="text-decoration:none; color:#0071C5; font-weight:bold;">Open-Vocabulary Temporal Action Localization using Multimodal Guidance</a> accepted at <strong>BMVC 2024</strong>.</td></tr>
 
                     <tr><td><strong>[Jun 2023]</strong></td><td>🧪 Our paper <a href="https://arxiv.org/pdf/2101.11606.pdf" style="text-decoration:none; color:#0071C5; font-weight:bold;">Generative Multi-Label Zero-Shot Learning</a> accepted at TPAMI 2023.</td></tr>
 
@@ -416,7 +480,7 @@
 
                     <tr><td><strong>[Feb 2021]</strong></td><td>✍️ Serving as a reviewer for ML Reproducibility Challenge 2020.</td></tr>
 
-                    <tr><td><strong>[Jan 2021]</strong></td><td>📝 Paper out on arXiv: <a href="https://arxiv.org/pdf/2101.11606.pdf" style="text-decoration:none; color:#0071C5; font-weight:bold;">Generative Multi-Label Zero-Shot Learning</a></td></tr>
+                    <tr><td><strong>[Jan 2021]</strong></td><td>📝 Paper out on arXiv: <a href="https://arxiv.org/pdf/2101.11606.pdf" style="text-decoration:none; color:#0071C5; font-weight:bold;">Generative Multi-Label Zero-Shot Learning</a>.</td></tr>
 
                     <tr><td><strong>[Jul 2020]</strong></td><td>🏅 TF-VAEGAN accepted at ECCV 2020.</td></tr>
 
@@ -430,7 +494,7 @@
                 </table>
             </div>
 
-            <h2 style="text-align:left; margin-left: 10px;">Publications  📄 </h2>
+            <h2 style="text-align:left; margin-left: 10px;">Publications</h2>
             <h3 class="pub-year">2026</h3>
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin:auto; font-family:calibri,sans-serif; font-size:16px; line-height:1.7;">
                 <tbody>
